@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*
+        flex : grow, shrink, basis의 그룹속성 
+        순서는 grow shrink basis 순서로 작성한다. 
+        단위를 같이 쓰기 때문에 순서에 유의한다. 
+
+        grow를 제외한 다른 값은 기본값이 있기 때문에 생략할 수 있다. 
+        그룹속성에서 값을 생략할 경우 
+        shrink: 1이 적용되면, basis는 값이 auto가 아닌 0이 적용된다. 
+
+
+        */
+
+        div.container{
+            display: flex;
+        }
+        div.item{
+           flex: 1 1 auto;  /* flex-grow: 1 1 150px;    /* grow 1 shrink 1  basis auto*/
+            
+            flex: 1;  /*flex-grow: grow 1 shrink 1 basis 0 */
+
+            flex: 1 150px;   /*flex-grow: grow 1 shrink 1 basis 150px */
+            flex: 1 150   /*flex-grow: grow 1 shrink 150 basis 0 */ 
+            /* 단위가 없으면 basis를 인식하지 않는다. */
+        }
+        div.item:nth-of-type(1){
+            width: 20%;
+        }
+        div.item:nth-of-type(2){
+            width: 40%;
+        }
+        div.item:nth-of-type(3){
+            width: 20%;
+        }
+        div.item:nth-of-type(4){
+            width: 20%;
+        }
+
+    </style>
+
+</head>
+<body>
+     <div class="container">
+        <div class="item"> 1</div>
+        <div class="item"> 2</div>
+        <div class="item"> 3</div>
+        <div class="item" >4</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+</body>
+</html>

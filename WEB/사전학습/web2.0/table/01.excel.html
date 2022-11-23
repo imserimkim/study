@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블로 시트 만들기</title>
+
+    <style>
+        table{
+            border-spacing: 0px;
+            border-collapse: collapse;   
+            /* 
+            table안에 셀들은 보더가 생성이 되면서 보더 사이에 여백이 생기는 현상이 일어난다. 
+            여백을 없애주는 속성으로 border-spacing: 0px;하며,
+            여백이 없어진 보더들은 서로 겹치게 되는데 마주보는 라인의 경우 값이 중첩되는
+            현상이 일어난다. 
+            border-callapse: callapse;로 합쳐지도록 설정한다. (기본값:separate)
+            */
+        }
+       td,th{
+            border: solid 1px gray;
+            padding: 0px;
+            margin: 0px;
+        }
+        thead{
+            background-color: skyblue;
+        }
+        tbody{
+            background: lightgray;
+        }
+        tfoot{
+            background: lightblue;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <!--
+
+        테이블 태그 
+        사이트에서 보여주는 정보들을 일관성있게 열과 행으로 이루어진 표로 
+        구성하여 제공하는 태그 
+
+        table = 하나의 주제로 이루어진 테이블을 구성하는 container
+        *sumary=html 이전에 사용하던 속성으로 테이블 태그에 직접 작성하며, 해당 테이블을 정의하는
+        용도로 사용했지만 사용성이 모호해서 html부터는 사용하지 않는다.
+        (이전버전에서도 사용하지 않아도 상관없다.) 
+
+        caption = 해당 테이블의 설명이나 제목(제목요소이기 때문에 표의 가운데 위치한다.)
+        tr = 테이블의 행을 구성하는 태그 tr에는 반드시 자식요소로 th나 td만 올 수 있다. 
+        th = 테이블 셀을 구성하는 태그, 제목을 의미한다. 
+
+        td = 테이블의 셀을 구성하는 태그 내용을 의미한다. 
+        th와 td는 단독적으로 구성될 수 없고 반드시 tr안에 존재해야 한다. 
+
+    -->
+    
+    <table>
+        <caption>공지사항</caption>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+        </tr>
+
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>가로 셀 병합하기</caption>
+
+        <tr>
+            <th colspan="3">제목</th>
+            <th colspan="2">제목</th>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+            <td>내용</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>셀 세로 병합하기</caption>
+        <tr>
+            <th rowspan="5">제목</th>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+
+    </table>
+
+    <table>
+        <caption>영역 구별하기</caption>
+
+        <thead>
+            <tr>
+                <th>날짜</th>
+                <th>연필</th>
+                <th>지우개</th>
+                <th>볼펜</th>
+                <th>노트</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>07월01일</td>
+                <td>50,000</td>
+                <td>1,200</td>
+                <td>5,500</td>
+                <td>47,000</td>
+            </tr>
+
+            <tr>
+                <td>07월02일</td>
+                <td>50,000</td>
+                <td>1,200</td>
+                <td>5,500</td>
+                <td>47,000</td>
+            </tr>
+
+            <tr>
+                <td>07월03일</td>
+                <td>50,000</td>
+                <td>1,200</td>
+                <td>5,500</td>
+                <td>47,000</td>
+            </tr>
+
+            <tr>
+                <td>07월04일</td>
+                <td>50,000</td>
+                <td>1,200</td>
+                <td>5,500</td>
+                <td>47,000</td>
+            </tr>
+
+            <tr>
+                <td>07월05일</td>
+                <td>50,000</td>
+                <td>1,200</td>
+                <td>5,500</td>
+                <td>47,000</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>합계</td>
+                <td>111</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

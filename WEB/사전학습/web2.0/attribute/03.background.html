@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.background.html</title>
+    <style>
+        /*
+
+        백그라운드 속성
+        컨텐츠 영역에 대한 배경에 관련된 속성
+        컬러, 이미지(사이즈, 배치)에 관련된 속성이 주를 이룬다. 
+
+        1. -color : 배경컬러
+        - 정해진 컬러 프리셋 네임(blue, red, coral....)
+        - #으로 이루어진 6자리 코드로 된 헥사코드
+        - rgb값으로 넣는 방법 background-color: rgb(red,green,blue)
+
+        html5에 추가된 속성
+        - rgba = background-color: rgb(red,green,blue,alpha)
+        alpha값은 0~1사이의 소숫값
+
+        oppacity와 alpha는 같은 투명도 조절이지만 다른점은 컨텐츠의 포함 여부다.
+        oppacity는 컨텐츠를 포함한 전체 영역에 투명도가 적용
+        rgba의 alpha값은 배경에만 영향을 준다. 
+
+        2. -image
+        - 배경이미지는 선택지의 영역만큼 들어가기 때문에 영역이 없다면 출력되지 않는다. 
+        - 이미지보다 영역의 크기가 작을 경우 잘라서 표시된다. 
+        - 이미지보다 영역의 크기가 클 경우 패턴처럼 반복되어서 영역을 채우려고 한다. 
+            추가적인 css로 반복을 제한한다. (background-repeat)
+
+        3. -repeat
+        repeat: 반복 (기본값)
+        repeat-x : x축으로만 반복(가로)
+        repeat-y : y축으로만 반복(세로)
+        no-repeat : 반복하지 않음 
+
+        4. -position 배경이미지에 위치 속성 
+        모든 객체(태그포함)의 기본 위치값 좌측상단(top:0, left:0)을 기준으로 한다. 
+        position의 입력순서는 x축, y축 순서대로 기입하며, 
+        px나 %같이 수치를 넣어줄수도 있다 
+        그리고 특정 위치값(top, left, right, bottom, center)로도 지정할 수 있다.
+        하나의 값만 지정할 경우 입력되지 않은 값은 center로 자동지정 된다. 
+        가급적 값을 넣는것이 좋다. 
+
+        5. -size 배경이미지 속성
+        - 기본값 auto(원본크기 비율유지) 
+        - 수치입력: 이미지 고유의 사이즈가 아닌 입력된 크기로 변환
+        첫번재 값은 width 두번째 값은 height가 적용되며,
+        값이 하나만 들어올 경우 하나는 auto로 설정된다. 
+        보통 이미지같은 경우는 원본비율이 가장 중요하기 때문에 하나의 값만 설정하고 
+        다른 값은 auto로 설정하는 경우가 많다. 
+
+        html5에 새로 생긴 속성
+        contain: 이미지를 전체 다 보여지는 조건하에 이미지를 최대한 늘림
+        cover: 컨텐츠를 전부 다 덮는다는 조건하에 
+
+        그룹속성 
+        background: color image repeat position 
+        background: color image repeat position / size 
+        순서는 바뀌어도 상관없으며, 필요한 값만 넣어도 된다. 
+        다만 size의 경우 position이 있을 때에만 그룹속성에 적용할 수 있다. 
+
+        그룹속성과 개별속성을 같이 사용해야 할 때
+        그룹속성을 먼저 사용 후 
+        나중에 개별속성을 특정 부분만 변경한다. (그룹속성 사용할 경우 전체값이 변경됨)
+
+        */
+
+        div{
+            width: 2000px;
+            height: 2000px;
+            background: url("wave.jpg.jpg") no-repeat 
+            
+        }
+
+        div{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        box
+    </div>
+</body>
+</html>

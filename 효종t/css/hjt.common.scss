@@ -1,0 +1,491 @@
+html,body,a,div,h1,p,ul,li{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+@mixin icon($a:19px, $b:19px){
+    width: $a;
+    height: $b;
+    @content;
+}
+@mixin font($t:16px, $v:#000){
+    font-size: $t;
+    color: $v;
+    @content;
+}
+@mixin flex($s:space-around, $c:center){
+    display: flex;
+    justify-content: $s;
+    align-items: $c;
+    @content;
+}
+header{
+    z-index: 88;
+    height: 156px;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .top{
+        @include flex(space-between, center){}
+        padding: 28px;
+        p{
+            @include font(16px, #fff){}
+        }
+        a{
+            img{
+                display: block;
+                height: 50px;
+            }
+        }
+        div{
+            @include flex(space-between, center){}
+            a{
+                margin: 0 8px;
+                img{
+                    display: block;
+                    @include icon(){};
+                }
+            }
+        }
+    }
+    .bottom{
+        ul{
+            margin: 0 auto;
+            width: 27%;
+            @include flex(space-between,center){};
+            li{
+                a{
+                    @include font(18px ,#fff){}
+                }
+            }
+        }
+
+    }
+}
+
+.banner{
+    margin-top: 156px;
+    height: 845px;
+    background-image: url(../img/Tissot_models2\ 2.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    @include flex(space-between, center){}
+    a{
+        display: block;
+        margin: 0 20px;
+
+    }
+}
+
+section{
+    max-width: 1500px;
+    margin: 0 auto;
+    .text{
+        padding: 94px 0;
+        text-align: center;
+        h2{
+            @include font(28px, #000){}
+        }
+        h3{
+            @include font(22px, #000){
+                font-weight: normal;
+            }
+        }
+    }
+    .video{
+        img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        }
+    }
+}
+
+.slide{
+    max-width: 1500px;
+    margin: 200px auto;
+    @include flex(center, center){
+        flex-direction: column;
+    };
+    .catte{
+        width: 40%;
+        @include flex(space-between, center){}
+        a{
+            @include font(28px, #000){
+                font-weight: bold;
+            }
+        }
+    }
+    .shop{
+        width: 100%;
+        margin: 35px 0;
+        @include flex(space-between,center){}
+        a{
+            @include font(33px, #000){font-weight: bold;}
+        }
+    }
+    ul{
+        @include flex(space-between,center){}
+        li{
+            margin: 0 23px;
+            text-align: center;
+            
+            width: 15%;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+                h5{
+                    @include font(16px, #000){font-weight: normal;}
+                }
+                p{
+                    @include font(14px, #000){font-weight: normal;}
+                }
+            }
+        }
+    }
+    ol{
+        @include flex(){}
+        li{
+            margin: 0 20px;
+            @include icon(12px, 12px){};
+            display: block;
+            border-radius: 6px;
+            background-color: rgba(0,0,0,0.3);
+            a{
+                
+            }
+        }
+        .selec{
+            background-color: #000;
+            border: ra;
+        }
+    }
+}
+
+.ca{
+    max-width: 1500px;
+    margin: 0 auto 200px;
+    @include flex(center, center){
+        flex-direction: column;
+    }
+    .tB{
+        text-align: center;
+        h6{
+            @include font(36px, #000){
+                font-weight: bold;
+            }
+        }
+    }
+    ul{
+        width: 100%;
+        @include flex(space-between, center){}
+        li{
+            width: 15%;
+            margin: 0 10px;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+            p{
+                margin-top: 20px;
+                @include font(22px, #000){
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.news{
+    background-color: rgba(245, 245, 245, 0.4);
+    width: 100%;
+    height: 230px;
+    margin-bottom: 200px;
+    .bWrap{
+        max-width: 1500px;
+        height: 100%;
+        margin: 0 auto;
+        @include flex(space-between,center){}
+            .nB{
+                width: 50%;
+                padding: 50px;
+                position: relative;
+                &::after{
+                    content: "";
+                    height: 40%;
+                    width: 2px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                &:nth-child(2):after{
+                    display: none;
+                }
+                @include flex(center, center){
+                    flex-direction: column
+                    
+            };
+            h4{
+                @include font(18px, #000){
+                    font-weight: bold;
+                }
+            }
+            p{
+                @include font(18px, #000){
+                }
+            }
+            label{
+                @include flex(space-between, center){
+                }
+                input{
+                    width: 300px;
+                    height: 30px;
+                    border: none;
+                    background-color: transparent;
+                    border-bottom: 3px solid #000;
+                    text-indent: 15px;
+                }
+                a{
+                    margin: 20px;
+                    img{
+                        display: block;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.new{
+    max-width: 1500px;
+    margin: 0 auto 200px;
+    text-align: center;
+    .teB{
+        @include flex(center, center){
+            flex-direction: column;
+        }
+        h5{
+            @include font(36px, #000){
+                font-weight: bold;
+            }
+            margin: 30px 0;
+        }
+        a{
+            img{
+                display: block;
+            }
+        }
+    }
+    ul{
+        margin-top: 30px;
+        @include flex(){}
+        li{
+            width: 20%;
+            img{
+                width: 100%;
+                display: block;
+            }
+            h4{
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.botS{
+    width: 100%;
+    padding: 40px 0;
+    background: #F5F5F566;
+    .wr{
+        max-width: 1500px;
+        margin: 0 auto;
+        @include flex(){};
+        .bx{
+            width: 23%;
+            @include flex(center, center){}
+            a{
+                text-align: center;
+                @include font(){}
+                img{
+                    width: 100%;
+                    display: block;      
+                }
+                p{
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    .whi{
+        width: 100%;
+        padding: 40px 0;
+        @include flex(center,center){
+            flex-direction: column;
+        };
+        p{
+            @include font(18px ,#000){
+                font-weight: bold;
+            };
+        }
+        ul{
+            @include flex(){}
+            li{
+                margin: 18px;
+                a{
+                    img{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .bla{
+        background-color: #000;
+        padding: 30px 0;
+        text-align: center;
+        p{
+            &:nth-child(1){
+                @include font(14px, #fff){}
+                padding-bottom: 20px;
+            }
+            &:nth-child(2){
+                @include font(16px, #fff){}
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+.empty{
+    height: 156px;
+}
+
+.subT{
+    width: 100%;
+    position: relative;
+    z-index: 50;
+    @include flex(){}
+    img{
+        width: 50%;
+        display: block;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    .tex{
+        width: 50%;
+        div{
+            margin: 0 auto;
+            width: 70%;
+
+            h2{
+                @include font(32px, #000){
+                    font-weight: bold;
+                }
+            }
+            p{
+                @include font(){}
+            }
+        }
+    }
+    
+}
+.bbBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .sideMenu{
+        width: 240px;
+        height: 400px;
+        background-color: #fff;
+        position: sticky;
+        left: 0;
+        top: 70%;
+        transform: translateY(-50%);
+        h2{
+            @include font(16px, #000){}
+        }
+        .g{
+            @include flex(space-between, center){}
+            @include font(){}
+            border-bottom: 2px solid #000;
+            p{
+                @include font(){}
+            }
+            img{
+                display: block;
+                height: 22px;
+            }
+        }
+        ul{
+            li{
+                padding: 6px;
+                a{
+                    @include font(){}
+                }
+            }
+        }
+    }
+    .shopp{
+        .wrp{
+            max-width: 80%;
+            margin: 0 0 300px 240px;
+            ul{
+                @include flex(space-between, center){
+                    flex-wrap: wrap;
+                }
+                li{
+                    margin: 20px 0;
+                    width: 18%;
+                    a{
+                        @include flex(center, center){
+                            flex-direction: column;
+                        }
+                        img{
+                            display: block;
+                            width: 100%;
+                        }
+                        h2{
+                            @include font(20px, #000){
+                                font-weight: bold;
+                            }
+                        }
+                        h4{
+                            @include font(){};
+                        }
+                        p{
+                            @include font(){};
+                        }
+                        .but{
+                            button{
+                                width: 65px;
+                                height: 30px;
+                                border-radius: 8px;
+                                @include font(12px, #fff){}
+                                margin: 10px;
+                                background-color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}
+}

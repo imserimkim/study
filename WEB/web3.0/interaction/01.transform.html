@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01.transform.html</title>
+
+    <style>
+        /*
+        transform 속성 
+        생성되어 있는 객체를 회전하거나 스케일을 조절하거나 
+        위치를 변경시키는 변형 css 
+        기본값으로 활용할 수 있으며, 이벤트적인 요소에서도 활용이 가능하다. 
+
+        1. rotat: 객체회전 
+        - 객체를 중심으로 작성된 수치만큼 회전 
+        -  단위는 deg(degree) ˚
+
+        rotate : x축과 y축에 대한 그룹속성
+        rotate3d : x축 y축 z축에 대한 그룹속성
+
+        위치를 가지고 있는 속성에는 기본적으로 x축과 y축이 따로 설정되어 있다. 
+        개별적으로 사용하거나 그룹속성에서 함께 사용할 수 있다. 
+        
+        벤더프리픽스 
+        -css3의 대부분 속성들은 실험적인 요소들이 많기 때문에  
+        브라우저마다 호환되는 범위가 서로 다르다. 그렇기 때문에 브라우저마다 똑같은 
+        화면을 출력하기 위해서 임시방편으로 핵을 걸어서 사용하는데 벤더프리픽스라고 한다. 
+        -webkit- 사파리
+        -mox- 파이어픽스 
+        -o- : 오페라 
+        -ms-: 익스, 엣지 
+        작성순서는 벤더프리픽스를 먼저 선언 후 기본css는 아래에 작성하는 것을  
+        일반적으로 한다. 
+
+        2. scale : 객체를 중심을 기준으로 작성도니 수치만큼 비율을 늘리거나 줄인다. 
+
+        기본값은 1(100%) 1보다 크면 확대, 작으면 축소(소숫점 사용가능)
+        크기는 객체를 기준으로 하며, 위치값은 변화되지 않는다. 
+        기준점을 바꿔서 사용할 수도 있다. 
+
+        3. transform: 객체의기준점을 바꾸는 css 
+        rotate나 scale 같은 경우 객체의 중심을 기준으로 하기 때문에 
+        기준점을 바꾸는 경우가 생긴다. 
+        특정 좌표값(left, right, top, bottom, center)이 아닌 px이나 %로 설정할 수도 있다. 
+        기본값은 50%, 50%이며, 첫번째값은 left 두번째값은 top이다. 
+
+        4. skew : 객체비틀기 
+        z축은 존재하지 않으며, 해당 방향으로 각도만큼 비틀기를 한다. 
+        그룹속성에서 값이 하나라면, y축은 적용되지 않으며, x축만 적용된다. 
+        둘 다 값을 넣어줘야 한다. 
+
+        5. translate : 객체 이동 css (좌표속성)
+        %나 px단위로 이동하며 양수는 left 음수는 right로 이동한다. 
+        z축에서는 %를 사용할 수 없다. 
+        
+        position과 같은 좌표의 이동값을 옮기는 속성이지만 
+        %로 이동할 경우 translate는 자기 자신의 크기를 기준으로 이동하며, 
+        position은 부모요소를 기준으로 좌표값이 정해진다. 
+
+
+        */ 
+
+        div.box{
+            width: 300px;
+            height: 300px;
+            background: coral;
+            transform: translateX(-50%); 
+
+
+             /* 
+            position: relative;
+            transform: skew(45deg,35deg);
+           
+
+           
+            transform: scale(1.5);
+            transform-origin: left top;      << 왼쪽 상단 기준
+        
+            -webkit-transform:  rotateY(45deg);
+            -moz-transfotm:  rotateY(45deg);
+            -o-transform: rotateY(45deg);
+            -ms-transform:  rotateY(45deg);
+
+            transform: rotateY(45deg);   
+            
+           */
+
+        }
+
+        div.box02{
+            width: 300px;
+            height: 300px;
+            background: pink;
+            position: relative;
+            left: 50%;
+        }
+
+        div.position, 
+        div.translate{
+            width: 1000px;
+            padding: 25px;
+            background: gray;
+            position: relative;
+            margin: 20px 0px;
+        }
+
+        div.position div, 
+        div.translate div{
+            background: coral;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+        }
+
+        div.position div:nth-child(3){
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            background: pink;
+        }
+        div.translate div:nth-child(3){
+            transform: translate(30px, 30px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+
+    <div class="box02">box02</div>
+
+    <div class="position">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+    </div>
+
+
+    <div class="translate">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+    </div>
+</body>
+</html>

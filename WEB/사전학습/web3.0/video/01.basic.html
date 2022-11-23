@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+    <!-- 
+
+        동영상 태그 사용하는 방법(오디오도 동일)
+
+        브라우저는 3개의 동영상 확장자명을 지원한다. 
+        mp4 : 모든 브라우저 호환 
+        ogv : 익스, 사파리 제외 
+        webm : 익스, 사파리 제외 
+
+        호환성이 향상됨에 따라 mp4가 모든 브라우저 호환으로 되어서 mp4만 사용해도 문제는 되지 않는다. 
+
+        비디오 태그는 단독태그로 실행할수도 있지만, 
+        소스파일이 없을 경우 내부에 sourse 태그를 별도로 사용한다.
+
+        비디오 태그에 사용되는 속성 
+        -controls = 재생, 소리, 화면조정등을 위한 컨트롤창 생성 
+
+        autoplay = 자동재생 설정
+        muted = 음소거
+        loop = 반복
+
+        브라우저 지침상 동영상을 자동재생 하고싶을 경우 
+        음소거 상태를 만들어야 자동재생 되도록 규정하고 있다. (웹접근성 지침)
+
+        poster = 동영상이 시작되기 전에 보여지는 썸네일 이미지 
+        (자동재생인 경우 확인할 수 없다.)
+        포스터는 재생이 시작된 후에는 일시정지나 동영상이 끝나고 나타나지 않는다. 
+        img태그처럼 태그로 생성된게 아니기 때문에 css로 크기를 조절할 수 없다. 
+        이미지의 크기조절이 필요하면 이미지 태그로 만들거나 그래픽툴에서 사이즈를 변경후에 
+        다시 가져와야 한다. 
+
+        preload
+        웹페이지 로딩시 동영상에 정보를 로드하는 속성 
+        none = 동영상에 대한 어떠한 정보도 로드하지 않는다. 
+        대신 재생을 누르면 이후로 동영상에 대한 모든 정보를 로드한다. 
+
+        metadata = 웹페이지 로딩시 동영상에 대한 일부정보만 로드한다. 
+        (동영상의 크기, 길이)
+
+        auto = 웹페이지 로딩시 동영상에 모든 정보를 다 로드한다. 
+
+        자동재생 속성을 사용하면서 preload의 값이 noneㅇ나 metadata인 경우 auto로 강제로 속성이 변한다.
+
+        값이 있으면 auto가 기본값이 된다.
+
+        playsinline = 모바일속성 
+        pc나 안드로이드에서 비디오를 볼때에는 자동재생시에 현재 보이는 화면에서 재생이
+        되지만 ios나 아이폰/안드로이드에서 재생하면 전체화면으로 자동 재생이 되는 경우가 있는데 
+        위 속성을 적용하지 않은 이유다. 
+
+        모바일을 지원하는 페이지에서 동영상 자동재생 지원시 
+        autoplay mited loop playsinline을 묶어서 사용한다. 
+
+        ios나 아이폰/아이패드 속성 
+
+        
+    -->
+
+    <video src="video/video.mp4" controls autoplay muted loop></video>     
+    <video poster="video/poster.jpg" controls preload="">
+        <source src="video/video.mp4">
+    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gQlMMD8auMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- 외부 영상링크 가져오기 -->
+    <iframe src="https://player.vimeo.com/video/337273052?h=46b7910481" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/337273052">The Moon in Motion - Great American Eclipse from Idaho and the Tetons</a> from <a href="https://vimeo.com/philhart">Phil Hart</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+</body>
+</html>

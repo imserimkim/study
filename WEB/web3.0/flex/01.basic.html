@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 속성</title>
+
+    <style>
+        /* 
+        flex Layout 
+
+        기존의 컨텐츠를 정렬하는 용도인 flaot, inline-block을 대체할 수 있는 
+        새로운 레이아웃 정렬css 기법 
+
+        table -> float -> flex -> grid의 순서로 레이아웃 기법이 발전해왔다. 
+        레이아웃 배치를 위해 만들어진 기법이기 때문에 float나 inline-block 을 이용한 
+        가로 정렬을 할때에도 훨씬 더 간편하고 강력한 기능을 제공한다. 
+        *ie에서는 100% 호환을 하지 않기 때문에 적절한 css를 찾아서 대체해줘야 한다. 
+
+        ie10기준 10과 11버전만 표준안만 지원하고 있으므로 적절한 flex의 사용을 고려해야
+        한다.
+
+        flex는 부모요소와 자식요소에 들어가는 css가 나뉘어진다. 
+        부모요소는 flex의 영향을 주는 공간 
+        자식요소는 flex의 영향을 받는 공간안에서 어떠한 형태로 배치되는 객체
+        
+
+        */
+
+        div.float{
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: gray;
+            overflow: hidden;
+        }
+        div.float div{
+            float: left;
+            width: 200px;
+            margin: 0px 10px;
+            height: 100px;
+            background: coral;
+        }
+
+        div.container{
+            padding: 12px;
+            box-sizing: border-box;
+            background: gray;
+            margin: 10px 0px;
+            display: flex;
+        }
+
+        div.container div{
+           height: 100px;
+           margin: 0px 10px;
+           background: coral;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="float">
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+    </div>
+
+    <div class="container">
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+    </div>
+</body>
+</html>

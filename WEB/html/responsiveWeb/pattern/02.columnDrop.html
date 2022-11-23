@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.columnDrop.html</title>
+
+
+    <style>
+        /*
+
+        column drop 
+
+        보통 가로폭의 100%인 레이아웃에서 가로형 컨텐츠의 경우 자주 쓰이며, 
+        크기가 줄어들때마다 컨텐츠들이 하나씩 아래로 떨어지게 되며 
+        모바일에서는 전체가 수직으로 쌓이는 패턴이다. 
+        컨텐츠의 내용이나 디자인에 따라서 분기점이 생길 수 있으나 
+        motly fluid보다 분기점은 훨신 작다. 
+
+        */
+
+        body,html{
+            margin: 0px;
+            padding: 0px;
+        }
+        .clearfix:after{  
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div.wrapper{
+            width: 100%;
+            padding: 1%;
+            box-sizing: border-box;
+            background: gray;
+        }
+
+        header{
+            width: 30%;
+            height: 500px;
+            background-color: coral;
+            float: left;
+        }
+
+        main{
+            width: 50%;
+            height: 500px;
+            background: skyblue;
+            float: left;
+        }
+        footer{
+            width: 20%;
+            height: 500px;
+            background: aqua;
+            float: left;
+        }
+
+        @media screen and (max-width:1024px) {
+            header{
+                width: 15%;
+            }
+
+            main{
+                width: 85%;
+            }
+            footer{
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            header{
+                width: 100%;
+                height: 100px;
+            }
+
+            main{
+                width: 100%;
+            }
+            
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="wrapper clearfix">
+        <header>header</header>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+
+</body>
+</html>

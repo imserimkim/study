@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!--svg.html--><!-- path로 만들어진 svg는 그냥 갖다 쓰기 -->
+    
+    
+    <svg width="1000" height="800" viewbox="0 0 2000 1600">  <!--viewbox: 작업영역 지정 (width: 2000, height: 1600)-->
+        <circle cx="200" cy="200" r="50" fill="transparent" stroke="#fff636"></circle>         <!--   (cx, cy: 중심점의 x,y), r=반지름 fill=채우기 색상, stroke=선 색상     -->
+        <rect x="350" y="150" width="100" height="100"></rect>                                <!-- 원은 기준점이 중심점이며, 사각형으 기준점이 왼쪽 꼭지점이다.-->
+        <line x1="550" y1="150" x2="650" y2="150" stroke="#f00"></line>   <!--시작 지점과 끝지점을 연결: 시작(x,y), 끝(x,y)-->
+        <text x="750" y="150" font-size="40">SVG</text>           <!-- font-size를 속성으로 주어도 사용할 수는 있음 -->
+        <image href="../image/2021_BI 6.jpg" x="150" y="300" width="200"></image>
+
+
+        <!------------------------------ mask 만들기 (이미지에 링크걸기)-------------------------->
+        <mask id="mask-image">
+            <text x="150" y="700" font-size="200" fill="white">SVG</text>                                    
+        </mask>
+        <image mask="url(#mask-image)" href="../image/2021_BI 6.jpg" x="150" y="500" width="400"></image>
+    </svg>
+
+    <hr>
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="400" width="400" viewbox="0 0 48 48" class="sparkle"><path d="m38.6 16.25-2.15-5-5.2-2.3 5.2-2.25 2.15-4.75 2.15                
+        4.75 5.2 2.25-5.2 2.3Zm0 29.75-2.15-4.8-5.2-2.25 5.2-2.25 2.15-5.05 2.15 5.05 5.2 2.25-5.2 2.25Zm-21.95-7.7-4.6-9.85L2 
+        23.95l10.05-4.5 4.6-9.8 4.65 9.8 10 4.5-10 4.5Zm0-7.4 2.4-4.8 4.9-2.15-4.9-2.15-2.4-4.8-2.35 4.8-4.95 2.15 4.95 2.15Zm0-6.95Z"/></svg>
+
+    <style>
+        .sparkle{}
+        .sparkle > path{
+            fill:transparent;
+            stroke: black;
+            stroke-dasharray: 200px; /*점선*/ 
+            stroke-dashoffset: 200px; /*선을 당기거나 밀기*/
+            animation: svg 5s forwards;
+        }
+        @keyframes svg{
+            0%{stroke-dashoffset:200px;}                   /*면은 되지 않고 선만 가능함*/
+            100%{stroke-dashoffset:0px;}
+        }
+    </style>
+</body>
+</html>

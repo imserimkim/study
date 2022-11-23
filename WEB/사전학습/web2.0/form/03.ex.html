@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시승 신청 게시판 만들기</title>
+    <style>
+        body,html,form,table,div,p,tr,th,td,input{
+            margin: 0px;
+            padding: 0px;
+        }
+        table{
+            border-spacing: 0px;
+            border-collapse: collapse;
+            font-size: 0px;
+        }
+
+        form{
+            width: 1170px;
+            margin: 100px auto;
+        }
+
+        div.titlebox{
+            width: 100%;
+            border-bottom: solid 2px black;
+            margin-bottom: 64px;
+        }
+
+        p.title{
+            font: bold 32px "돋움";
+            /* 폰트 그룹속성 font : 굵기 사이즈/행간 글꼴 */
+        }
+        p.text{
+            font: normal 18px "돋움";
+            padding: 30px 0px;
+        }
+
+        tr{
+            height: 96px;
+            border-bottom: solid 1px #dddddd;
+        }
+        th{
+            width: 160px;
+        }
+        label.itemTitle{
+            width: 100%;
+            text-align: left;
+            font-weight: normal;
+            display: block;
+            font-size: 16px;
+        }
+        span.star{
+            color: #00b0f0;
+            margin-left: 7px;
+            vertical-align: middle;
+            font-weight: bold;
+            /*vertical-align : table속성이나 inline속성이 적용된 상태에서만 적용되는 css*/
+
+        }
+
+        input.text01{
+          width: 360px;
+          height: 56px;
+          box-sizing: border-box;
+        }
+
+        .th02{
+            padding-left: 130px;
+        }
+
+        input[type=button]{                 /* input 요소 중에서 type이 button인 요소만 */
+            width: 115px;
+            height: 56px;
+            border: none;
+            background: transparent;       /* 배경 제거 */
+            margin-left: 10px;
+            vertical-align:top;
+        }
+        input.submitBtn{
+             color: #ffffff;
+            background: navy;
+            margin-right: 40px;
+        }
+
+        input.submitBtn02{
+            background: #dfe4e8;
+            color: #333333;
+        }
+        
+        input.text02{
+            height: 56px;
+            width: 304px;
+            box-sizing: border-box;
+        }
+
+        input.sigungu{
+            margin: 0px 49px;
+        }
+
+        input[type=radio]{
+            width: 24px;
+            height: 24px;
+            background: #001e50;
+            vertical-align: bottom;
+        }
+        label.radioLabel{
+            font-size: 16px;
+            margin: 0px 50px 0px 7px;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+
+    <form action="" method="post">
+        <div class="titlebox">
+            <p class="title">개인정보입력</p>
+            <p class="text">
+                일부 전시장에서는 만 26세 이상만 운전자 시승이 가능하며, 만26세 이하 고객께서는
+                동승석 탑승으로 시승이 제한될 수 있습니다.  
+            </p>
+        </div>
+    
+        <table>
+            <tr>
+                <th>
+                    <label for="name" class="itemTitle">
+                        신청자 성명<span class="star">*</span>
+                    </label>
+                </th>
+                <td>
+                    <input type="text" class="text01" id="name" placeholder="이름을 입력해주세요.">
+                </td>
+            </tr>
+
+            <!----------------------------------------------------------------------------------->
+
+            <tr>
+                <th>
+                    <label for="car" class="itemTitle">
+                            현재차량 보유모델 
+                    </label>
+                </th>
+                <td>
+                    <input type="text" class="text01" id="car" placeholder="보유차량을 입력해주세요.">
+                </td>
+            
+             <!----------------------------------------------------------------------------------->
+
+          
+             <th class="th02">
+                 <label for="birth" class="itemTitle">
+                        출생년도<span class="star">*</span>
+                </label>
+            </th>
+            <td>
+                 <input type="text" class="text01" id="birth" placeholder="이름을 입력해주세요.">
+            </td>
+          
+            </tr>
+          
+
+           <!----------------------------------------------------------------------------------->
+
+            <tr>
+                <th>
+                    <label for="call" class="itemTitle">
+                           연락처<span class="star">*</span>
+                   </label>
+               </th>
+
+               <td colspan="3" >
+                    <input type="text" class="text01" id="call" placeholder="'-' 없이 입력해주세요.">
+                    <input type="button" value="인증번호 받기" class="submitBtn">
+
+                    <input type="text" class="text01" placeholder="인증번호 입력">
+                    <input type="button" class="submitBtn02" value="확인">
+               </td>
+            </tr>
+
+        <!----------------------------------------------------------------------------------->
+
+            <tr>
+                <th>
+                    <label for="local" class="itemTitle">
+                           전시장 선택<span class="star">*</span>
+                   </label>
+               </th>
+
+               <td colspan="3">
+                <input type="text" class="text02" id="local" placeholder="지역">
+                <input type="text" class="text02 sigungu"  placeholder="용산구">
+                <input type="text" class="text02" id="local" placeholder="용산 한강대로 전시장">
+               </td>
+
+            </tr>
+
+            <!----------------------------------------------------------------------------------->
+
+            <tr>
+                <th>
+                    <label for="buy" class="itemTitle">
+                         구매시기<span class="star">*</span>
+                   </label>                                     <!--id 중복 x label은 여러개 o-->
+               </th>
+
+               <td colspan="3">
+                 <input type="radio" name="buyingDate" id="buy" vaule="3month" checked>
+                 <label for="buy" class="radioLabel">3개월 이내</label>
+                 
+                 <input type="radio" name="buyingDate" id="buy01" vaule="6month" >
+                 <label for="buy01" class="radioLabel">6개월 이내</label>
+                 
+                 <input type="radio" name="buyingDate" id="buy02" vaule="1years">
+                 <label for="buy02" class="radioLabel">1년 이내</label>
+
+                 <input type="radio" name="buyingDate" id="buy03" vaule="2years" checked>
+                 <label for="buy03" class="radioLabel">2년 이내</label>
+
+                 <input type="radio" name="buyingDate" id="buy04" vaule="noBuying" >
+                 <label for="buy04" class="radioLabel">계획없음</label>
+               </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>

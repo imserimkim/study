@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07.flex-grow</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        
+        /*
+        flex-grow: 아이템들의 영역 배분 속성 
+        숫자가 클수록 많은 영역을 가져 가게 되며 
+        컨텐츠 영역을 제외한 모든 아이템에 적용된 grow의 숫자만큼
+        배율을 나눠서 영역값으로 가져가도록 한다. 
+
+        item의 크기가 고정형이나(px), 값이 0일 경우 적용되지 않는다. 
+
+        
+
+        */ 
+
+        div.container{
+            display: flex;
+        }
+        
+        /*
+        div.item{
+            flex-grow: 1;
+        }
+        */
+      
+        div.item:nth-of-type(1){
+            flex-grow: 2;
+        }
+        div.item:nth-of-type(2){
+            flex-grow: 1;
+        }                                /* 전체 width 값을 해당 숫자의 합만큼 나눠서 분배 */
+        div.item:nth-of-type(3){
+            flex-grow: 1;
+        }
+        div.item:nth-of-type(4){
+            flex-grow: 3;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item"> aaaaaaaaaaaa</div>
+        <div class="item"> bbb</div>
+        <div class="item"> cccccc</div>
+        <div class="item" style="font-size:30px;">ggggg</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+</body>
+</html>

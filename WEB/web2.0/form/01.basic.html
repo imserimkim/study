@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력태그</title>
+    <style>
+        textarea{
+            width: 700px;
+            height: 500px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        from 태그
+        사용자가 입력을 위한 다양한 방식의 입력 폼을 제공하는 태그
+        지정된 서버에 입력된 값을 보내는 역할을 한다. 
+        데이터를 전송하거나 받아와야 하기 때문에 항상
+        form태그로 감싸고 입력태그를 작성해야 한다. 
+        form태그의 자식요소는 제한이 없다. 
+        
+        1.form태그에 들어가는 속성
+        - action 실행시킬 주소를 지정 
+        입력된 값을 서버 또는 프로그램의 경로를 지정한다. 
+        이곳으로 데이터를 전송하려면 브라우저가 전송위치를 알아야 하기 때문에 
+        필수적으로 들어가는 요소이다. 
+
+        -method 서버에 전송되는 정보를 보내는 타입 
+        *-get : 전송되는 데이터의 값들을 암호화하지 않는다. 
+        암호화가 되지 않기 때문에 보안에 취약하며, 한번에 전송되는 데이터의 양이
+        제한적이다.(쿼리 문자열로 전송되는 타입이기 때문)
+
+        *-post : 전송되는 데이터의 값들을 암호화해서 전송  
+        데이터를 전송하는 방식이어서 브라우저에 내역을 남기지 않는다. 
+        보안성도 get에 비해서 월등히 높으며, 한번에 전송되는 양에도 제한이 없다. 
+
+        -novalidate : html5에서 새로 생긴 속성중에 하나로 유효성을 체크하는 속성값이 
+         있으면 해당 기능을 무시하는 속성
+
+        -name :  id와 class 개념으로 입력태그에만 사용할 수 있으며, 
+        css를 주기위해서 생성하는 것은 아니며, 스크립트나 서버내에서 
+        정보의 값을 식별하기 위한 용도 
+
+        -value
+        input 요소의 type에 따라 용도가 달라진다. 
+        -checkbox 형태에서는 서버로 제출되는 값
+        -text, password, hidden에서는 초기값
+        -button타입,reset,submit 포함에서는 버튼 내부 텍스트 
+        * file type은 value가 적용되지 않는다. 
+
+        form태그 안에 들어가는 태그들
+        1. fieldset = 입력요소들을 구분지을때 쓰는 그룹태그 
+        간단한 구조나 그룹을 나눌 필요가 없는 경우 생략하여도 무방하다.
+        
+        2. legend 필드셋의 제목
+        filedset이 들어갈 경우 legend를 무조건 추가해준다.
+
+        input에 들어가는 속성 
+        maxlength = 최대글자수
+        minlenght = 최소글자수(최소글자수는 요소성을 체크한다.)
+        placeholder = 입력창의 힌트(내용입력시 텍스트가 사라짐)
+        size = input 입력창의 길이 조절 속성 
+        * px이나 %개념이 아닌 글자수 개념. 기본값은 20이며, width처럼 
+        정확한 값을 파악하기 어렵기 때문에 잘 사용하지 않으며, width섞어서도 사용하지 않는다.
+
+        required=input의 속성을 필수입력요소로 변경
+        
+        disabled = 사용자가 입력을 할 수 없고, 안에 있는 데이터 모두 전송되지 않는다. 
+        readonly = 사용자가 입력을 할 수는 없지만, 안에 있는 데이터는 전송되며, 
+        텍스트를 긁어오거나 복사할 수도 있다. 
+
+        checked, selected = 체크박스와 셀렉트 태그에서 쓰이며 선택지 중에서 우선적으로
+        선택되도록 하는 속성
+
+        textarea = 
+        input으로 생성된 text영역은 여러줄을 작성할 수 없다. 
+        여러줄의 텍스트를 작성할때에는 textarea로 생성한다. 
+        단 사용자가 리사이즈를 할 수 있는 버튼을 없애기 위해 
+        리셋값에 resize:none을 설정한다.
+
+
+
+
+    -->
+
+    <form action="" method="" novalidate>
+        <fieldset>
+            <legend>input에 들어가는 타입</legend>
+            <input type="text" size="50" maxlength="50" minlength="5" placeholder="아이디를 입력하세요.">     
+            <!--가장 기본적인 입력창, 닫는 태그 없음-->
+
+            <input type="password" readonly="ㅇㄴㅇㄹㅇ">  <!--입력텍스트를 암호화해서 보여줌 -->
+            <input type="button" value="버트으으은">
+             <!--
+                기능을 가지고 있지 않은 버튼 형태
+                커스텀해서 사용하기 위해서 생성한다. 
+            -->
+            <input type="submit" value="로그인"> <!-- 서버에 데이터를 전송하기 위해 만들어진 버튼-->
+            <input type="reset"> <!--초기화 버튼 해당 영역안에 있는 모든 입력내용이 초기화-->
+            <input type="image" src="../example/images/arrow_icon.png"> <!--이미지를 삽입할 수 있는 버튼형태 src 속성으로 이미지를 연결한다.-->
+            
+            <input type="color"> <!--컬러를 지정할 수 있는 colorpocker창이 생성 ie, 사파리 미지원 -->
+
+            <input type="date">
+            <input type="datetime-local"> <!--날짜를 선택할 수 있는 캘린터 창이 생성 html5전용 ie 미지원
+            datetime, datetimelocal은 호환되지 않음 -->
+
+            <input type="email">
+            <!--이메일 주소 작성 폼 
+            일반 텍스트 창과 같지만 제출을 눌렀을 때 이메일 주고 유효성 검사를 진행한다. 
+            조건을 만족하지 못하면 제출되지 않고 하단에 에러를 표시한다.-->
+
+            <input type="file"> <!--파일 업로드 버튼-->
+            <input type="hidden"> <!--사용자가 직접적으로 사용하는 영역은 아니지만 보이지 않는 곳에서
+                                데이터를 전송받거나 혹은 분류하기 위한 영역으로 사용하기 위해서 만들어놓는 타입 -->
+
+            <input type="number"> <!--문자는 입력되지 않으며 숫자만 입력할 수 있는 창. 
+                                        오른쪽 끝에 스피너 버튼으로 조절할수 있다. -->
+
+            <input type="radio"> <!--중복선택이 불가능한 체크박스 형태 예)성별 -->
+            <input type="checkbox"> <!--중복선택이 가능한 체크박스 형태 예)취미 특기-->
+
+            남성 <input type="radio" name="gender" value="male" checked>  <!--name으로 그룹핑, checked: 미리선택-->
+            여성 <input type="radio" name="gender" value="female">
+         
+    
+
+        </fieldset>
+
+        <fieldset>
+            <legend>input 외에 사용하는 입력태그 (필드셋)</legend>
+
+            <select>
+                <option value="default">월</option>
+                <option value="jan">1</option>
+                <option value="feb">2</option>
+                <option value="mar">3</option>
+                <option value="apr">4</option>
+                <option value="may">5</option>
+                <option value="jun">6</option>
+                <option value="jul">7</option>
+                <option value="aug">8</option>
+                <option value="sep">9</option>
+                <option value="oct">10</option>
+                <option value="nov">11</option>
+                <option value="dec">12</option>
+            </select>
+
+            <select>
+                <option >통신사</option>
+                <option>kt</option>
+                <option>skt</option>
+                <option>lg u+</option>
+            </select>
+
+            
+            <select>
+                <option>011</option>
+                <option>012</option>
+                <option selected>010</option>
+            </select>
+
+            <textarea>
+
+            </textarea>
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky</title>
+    <style>
+        body{
+            height: 5000px;
+        }
+        div.header{
+            width: 100%;
+            height: 300px;
+            background-color: coral;
+            position: sticky;
+            margin-top: 200px;
+            left: 0px;
+            top: 0px;          /* 예약값 */
+        }
+        div.box{
+            width: 100%;
+            height: 300px;
+            background: pink;
+        }
+
+        /* 
+        sticky: relative와 fixed의 혼합형 
+        반드시 위치값이 있어야 하며, 위치값이 아닌 예약값이다. 
+        기본적으로 relative의 속성을 유지하다가, 예약값에 있는 위치에 도달하게 되는 경우
+        fixed로 변하게 된다. 
+        *ie미지원 등 브라우저 별로, 버전별로 지원이 상이하기 때문에
+        스크립트로 대체해서 사용한다. 
+        */
+
+
+    </style>
+</head>
+<body>
+    <div class="header">header</div>
+    <div class="box">box</div>
+    
+</body>
+</html>

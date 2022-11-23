@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 만들기(+가상class)</title>
+
+    <style>
+        body,html,div,ul,li,a{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        div.container{                     
+            width: 1000px;
+            margin: 100px auto;
+            background: coral;
+            text-align: center;          /* 부모가 자식한테 정렬하는 것 */
+            
+        }
+
+        div.container ul{
+            width: 750px;
+            background-color: gray;
+            margin: 0px auto;          /* 나한테 직접 정렬하는 것 */
+            font-size: 0px;
+           
+
+        }
+        div.container ul li{
+            width: 150px;
+            height: 50px;
+            display: inline-block;
+            background-color: pink;
+            text-align: center;
+            border-right: solid 1px black; /* left와 right 중 한 곳만 넣어준다 */
+            box-sizing: border-box;
+        }
+        div.container ul li:nth-child(1){           /* nth: n번째 */
+            border-left: solid 1px black ;
+        }         
+         
+        div.container ul li a{
+            font-size: 16px;
+            line-height: 50px; 
+            color: white;
+            font-weight: bold;     /* 전체 영역까지 선택할 수 있도록 block으로 지정 */
+            display:block;
+        }
+        /* 
+        
+        텍스트 한줄일때 가운데 정렬하는 방법
+        line-height를 부모요소의 높이값만 똑같이 입력한다. 
+        
+        */
+
+        div.container ul li:hover{                /* hover 마우스를 갖다 댄 객채 */
+            background: purple;
+        }
+        div.container ul li:hover a{               /* 자식 요소의 a 태그를 만들어서 변경 */
+            color: gray;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

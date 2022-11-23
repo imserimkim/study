@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01.pseudo-elements.html 가상요소</title>
+    <style> 
+    
+        /* 
+
+        가상요소 
+        - 태그상에는 존재하지 않지만 화면상에는 존재하는 것처럼 생성하는 스타일 기법
+
+
+        *선택자: before - 선택자 내용 바로 앞에 오는 요소 생성
+        *선택자: after - 선택자 내용 바로 뒤에 오는 요소 생성     *중요*
+
+
+        ::selection - 드래그 되어있는 요소(텍스트만 가능)
+        ::placeholder - input 요소의 안에 placeholder 속성
+
+        before와 after는 inline 속성이다. 
+
+        가상요소는 중요한 내용을 담고 있지 않은 꾸미는 요소를 작성할대  주로 작성을 하는
+        용도로 사용한다. 
+
+        [:과 ::의 차이]
+        html5로 넘어오면서 가상요소와 가상선택자를 구별하기 위해서 가상요소는 
+        ::을 두개 사용하는 걸로 바꾸게 되었지만, 
+        ::은 일부 css3를 지원하지 않는 하위브라우저(ie8)는 더블콜론을 인식하지 못한다. 
+        하위브라우저까지 호환하기 위해서는 싱글콜론을 사용한다. 
+        하위브라우저까지 호환하기 위해서는 싱글콜론을 사용해야 한다. 
+
+
+        [clearfix 기법] 
+        float되어 있는 요소들을 감싸는 부모요소에 :after(:before는 안됨)
+        가장끝에 가상요소를 추가함으로써 
+        content:"";
+        display:block;
+        clear:both; 를 추가하여 float를 해제하는 방법 
+
+        overflow보다 훨씬 안정적이며, 
+        일반 태그를 사용하지 않아도 되는 장점이 있다. 
+         */
+
+         div.box{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background: coral;
+         }
+
+         div.box:before{
+            content: "";          /* 가상요소-생략은 안되며 빈 영역으로 놓기 */
+            width: 50px;
+            height: 50px;
+            background: pink;
+            display: block;
+         }
+
+         div.box:after{
+            content: "";          /* 가상요소-생략은 안되며 빈 영역으로 놓기 */
+            width: 100%;
+            height: 50px;
+            background: red;
+            display: block;
+         }
+
+         ul{
+            list-style: none;
+            padding: 25px;
+            background: coral;
+            width: 500px;
+         }
+
+         ul li{
+            width: 100%;
+            height: 50px;
+            background: pink;
+            float: left;
+         }
+         .clearfix{
+            clear: both;            /* float 해제 */
+            
+         }
+
+         .clearfix:after{
+            content: "";
+            clear: both;
+            display: block;          /* 암기 */ 
+         }
+
+         div.text::selection{
+            color: pink;
+         }
+         input::placeholder{
+            color: orange;
+            font-size: 14px;
+         }
+
+
+    </style>
+      
+</head>
+<body>
+
+    <div class="box">box</div>          <!--가상요소의 매개체-->
+    
+    <ul class="clearfix">
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <div class="clearfix"></div>
+    </ul>
+
+    <div class="text">
+        Lorem ipsum dolor sit amet. 드래그 해주세요.
+    </div>
+
+    <input type="text" placeholder="아이디를 입력해주세요"
+></body>
+</html>

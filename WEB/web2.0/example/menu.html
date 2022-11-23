@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 예제 만들기</title>
+    
+    <style>
+        body,html,div,ul,li,a{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }                                   /* 기본 세팅(reset하기) */
+
+
+        div.container{
+            width: 1000px;
+            background-color: coral;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        div.container ul{
+            float: right;
+        }
+
+        div.container ul li{
+            float: left;
+        }
+        div.container ul li a{             /* 부모 노드에 링크를 설정해주면 전체 링크가 걸리게 된다 */
+            color: gray;
+            font-size: 12px;
+            display: block;
+            background: url("images/arrow_icon.png") no-repeat 5px center / 10px auto;
+            padding-left: 20px;                   /*전체가 아닌 하나의 객체로 분리하기 위해 padding, margin사용 */
+            margin-right: 20px;
+        }
+        div.container ul li:nth-child(4) a{
+            margin: 0px;
+        }    
+        </style>
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <ul class="topMenu">
+            <li><a href="#" >로그인</a></li>             <!-- *주의: a태그보다 li태그가 먼저 와야함(상속관계) -->
+            <li><a href="#" >회원가입</a></li>
+            <li><a href="#" >사이트맵</a></li>
+            <li><a href="#" >이메일</a></li>
+        </ul>
+    </div>
+</body>
+</html>

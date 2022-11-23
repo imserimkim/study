@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.transition.html</title>
+    <style>
+
+        /* 
+        
+        transition 효과 
+        특정 행동(이벤트)을 취했을 때 변화되는 요소가 전환되는 시간적인 효과를 주는 속성  
+        
+        -property : 전환되는 대상이 되는 속성(background,width,height...)
+        property의 기본값은 all이며 값이 많거나 특정한 속성을 지칭할 수 없는 경우 
+        생략하기도 한다. 
+
+        -duration 전환되는 시간 
+        단위는 s,ms 1초 = 1s, 1s = 1000ms(스크립트에서 ms를 사용하기 때문에 사용 권장)
+
+        -delay : 지연시간 
+        이벤트가 발생되고 전환이 시작되기 까지의 지연시간 
+        단위는 s,ms 1초 = 1s , 1s = 1000ms 
+
+        -timing-funtion : 전환시간 함수 
+        linear : 처음부터 끝까지 일정한 속도를 유지 
+        ease :  느리게 시작 -> 빠르게 진행 -> 느리게 종료 
+        ease-in : 느리게 시작 -> 가속하면서 종료(기본값)
+        ease-out : 빠르게 시작해서 감속하면서 종료 
+        ease-in-out : 느리게 시작 -> 빠르게 진행 -> 느리게 종료
+        (ease보다 변화속도가 빠름) 
+
+        transition: 그룹속성 
+        transition: property(생략가능) duration(생략불가능) delay(생략가능) timing(생략가능)
+
+        duration을 제외한 나머지 속성은 기본값이 있기 때문에 생략해도 된다. 
+        다른 속성은 순서가 바뀌어도 상관 없다. 하지만 
+         !! duration과 delay는 순서가 바뀌면 안된다. !!
+        값이 하나만 있으면 duration 만 적용되고 값이 두개 일때에는 
+        항상 앞에 있는 시간 값이 duration이 된다. 
+
+
+
+        */
+
+        div.box{
+            width: 500px;
+            height: 500px;
+            background: lightblue;
+            transform-origin: left top;
+            /* 
+            transition-property:all;
+            transition-duration: 1500ms; /*1.5s
+            transition-delay: 500ms;
+            transition-timing-function:ease-in-out ;
+            */
+            transition: 1500ms;
+        }
+        div.box:hover{
+            background-color: lightpink;
+            transform: scaleX(1.5);
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+</body>
+</html>

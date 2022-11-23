@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../webpage"
+		},
+		{
+			"path": "../../../사전학습"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "사전학습"
+	}
+}

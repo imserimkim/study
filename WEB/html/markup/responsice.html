@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+</head>
+<body>
+    <!-- 코드정렬 alt+ shift + f -->
+    <!-- responsive.html -->
+   <article>
+    <h2>responsice</h2>
+    <ul>
+        <li>가로유형 콘텐츠 세로 전환</li>
+        <li>콘텐츠 순서 바꾸기</li>
+        <li>포지션 해제</li>
+        <li>picture 활용한 각 디바이스 이미지 출력</li>
+        <li>※ 반응형 코드 추가 또는 변경</li>
+    </ul>
+
+   </article>
+
+   <section class="issue-1" >
+    <h2>Flex(가로유형 콘텐츠 세로 전환)</h2>
+    <ul class="ex">
+        <li>이미지 01</li>
+        <li>이미지 02</li>
+        <li>이미지 03</li>
+    </ul>
+   </section>
+
+   <style>
+    .issue-1{
+        max-width: 1400px;
+        margin:100px auto;
+    }
+    .issue-1 ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between; /*height 값이 없으면 작동할 수 없음*/
+        align-items: center;     /* between : 가로 , align item: 세로 */
+        flex-direction: column;
+    }
+    .issue-1 ul > li{
+        width: 30%;
+        height: 300px;
+        background-color: lightpink;
+    }
+    </style>
+    <!---------------------------                   issue-2           ---------------------------->
+   
+  
+
+    <section class="issue-2" >
+        <h2>Flex(콘텐츠 순서 바꾸기)</h2>
+        <ul class="ex">
+            <li>
+                <div>이미지</div>
+                <div>내용....</div>
+            </li>
+            <li>
+                <div>이미지</div>
+                <div>내용....</div>
+            </li>
+        
+        </ul>
+   </section>
+
+   <style>
+    .issue-2{
+        max-width: 1400px;
+        margin: 100px auto;
+    }
+    .issue-2 li{
+        display: flex;
+    }
+    .issue-2 li div{
+        width: 50%;
+    }
+    .issue-2 li div:nth-child(1){
+        height: 200px;
+        background-color: lightblue;
+    }
+    .issue-2 li div:nth-child(2){
+    }
+
+    /* 순서변경 */
+    .issue-2 li:nth-child(even) div:nth-child(1) {
+        order: 2;
+    } 
+    .issue-2 li:nth-child(even) div:nth-child(2) {
+        order: 1;
+    }
+   </style>
+
+<!---------------------------                   issue-3           --------------------------- -->
+    
+    <section class="issue-3" >
+        <h2>포지션(absolute절대좌표, relative, fixed고정좌표, static, sticky고정+상대)</h2>
+        <div class="pos1">이미지</div>
+        <div class="pos2">내용....</div>
+    
+    
+   </section>
+
+   <style>
+    body{height: 5000px;}
+    .issue-3{
+        max-width: 1400px;
+        margin: 100px auto;
+        border: 1px solid black;
+        height: 500px;
+    }
+    .issue-3 .pos1{
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        background-color: #f00;
+    }
+
+    .issue-3 .pos2{
+        position: sticky;
+        top: 100px;     /* 상단으로 부터 100px 이되면 멈춤 */
+        background-color: lightgrey;
+    }
+   
+    @media (max-width:1400px) {
+        .issue-3 .pos1{
+            position: static;                /* position 중단 */ 
+        }
+    }
+    
+
+   </style>
+
+<!---------------------------                   issue-4           --------------------------- -->
+   <section class="issue-4">
+    <h2>picture태그</h2>
+    <picture>
+        <source media="(max-width:1400px)" srcset="../image/Group14.png"/>
+        <img src="../image/2021_BI 6.jpg" alt=""/>
+    </picture>
+   </section>
+
+</body>
+</html>

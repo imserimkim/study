@@ -1,0 +1,230 @@
+div.banner {
+  width: 100%;
+  height: 845px;
+  background: url("../img/Tissot_models2 2.jpg") no-repeat center center;
+  position: relative;
+}
+div.banner div {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button.btn-left {
+  width: 55px;
+  height: 55px;
+  background: url("../img/arrow-right 5 (1).png") no-repeat center center;
+  border: none;
+}
+
+button.btn-right {
+  width: 55px;
+  height: 55px;
+  background: url("../img/arrow-right 5.png") no-repeat center center;
+  border: none;
+}
+
+section.text {
+  text-align: center;
+  margin: 95px auto;
+  line-height: 50px;
+}
+section.text h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+section.text p {
+  font-weight: 400;
+  font-size: 1.37rem;
+}
+
+div.main-img {
+  width: 1500px;
+  height: 846px;
+  background: url("../img/main img.jpg") no-repeat center center;
+  margin: 0px auto;
+}
+
+div.container {
+  width: 1500px;
+  height: 606px;
+  margin: 169px auto;
+  position: relative;
+}
+div.container div.btn {
+  text-align: center;
+}
+div.container div.btn button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.75rem;
+  margin: 0px 2%;
+}
+div.container ul {
+  width: 98.7%;
+  display: flex;
+  justify-content: center;
+  margin-top: 67px;
+}
+div.container ul li {
+  width: 230px;
+  text-align: center;
+}
+div.container ul li figcaption {
+  font-size: 1.125rem;
+}
+
+p.at {
+  font-size: 1rem;
+  margin: 8px 0px 30px 0px;
+}
+
+p.price {
+  font-size: 0.875;
+}
+
+div.btn-box {
+  width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button.btn-left01 {
+  width: 33px;
+  height: 33px;
+  background: url("../img/arrow-right 6.png") no-repeat center center;
+  border: none;
+}
+
+button.btn-right01 {
+  width: 33px;
+  height: 33px;
+  background: url("../img/arrow-right 7.png") no-repeat center center;
+  border: none;
+}
+
+div.circle {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.circle1 {
+  width: 13px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0px 8px;
+}
+
+div.circle2 {
+  width: 13px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000000;
+  margin: 0px 8px;
+}
+
+section h3 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 170px 0px 92px 0px;
+  text-align: center;
+}
+section ul {
+  width: 1500px;
+  height: 575px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+}
+section ul li {
+  width: 212px;
+}
+section ul li figcaption {
+  font-size: 1.375rem;
+  text-align: center;
+  margin-top: 35px;
+}
+
+div.input-box {
+  width: 100%;
+  height: 234px;
+  background: rgba(245, 245, 245, 0.4);
+  margin-top: 176px;
+  text-align: center;
+  display: flex;
+  font-weight: 700;
+}
+div.input-box div {
+  width: 50%;
+  padding-top: 48px;
+  position: relative;
+}
+div.input-box div input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid #000000;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 21px;
+  color: rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+div.input-box div button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+p.title {
+  font-size: 1.375rem;
+  margin-bottom: 32px;
+}
+
+div.ooo::after {
+  width: 1px;
+  height: 113px;
+  background-color: rgba(0, 0, 0, 0.3);
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.new-box h3 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 72px 0px 28px 0px;
+  text-align: center;
+}
+section.new-box img.small-down {
+  margin: 0px auto 78px auto;
+  display: flex;
+}
+section.new-box ul {
+  width: 1500px;
+  height: 387px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto 114px auto;
+}
+section.new-box ul li {
+  width: 324px;
+}
+section.new-box ul li figcaption {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 16px;
+}/*# sourceMappingURL=dwt.index.css.map */

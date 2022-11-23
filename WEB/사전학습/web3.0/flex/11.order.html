@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.order.html</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+        /* 
+        
+        order
+        자식요소에 들어가는 속성 
+        각 아이템들의 순서를 지정하는 속성 
+        숫자가 높을수록 뒤로 가며, 기본값은 0 
+
+        시각적인 위치만 바꿔줄 뿐 브라우저가 인식하는 순번에는 변함이 없다. 
+        구조자체에 변화는 아니기 때문에 접근성 측면에서 주의해야 할 필요가 있다.
+        
+        z-index
+
+        아이템들의 z축 정렬이며, position의 z-index와 같은 원리로 가지고 있다. 
+        기본값은 0이며, 0보다 값이 높으면 상위로 정렬하게 된다. 
+
+        */ 
+
+        div.container{
+            display: flex;
+        }
+
+        div.item:nth-of-type(1){
+            order: 3;
+        }
+
+        div.item:nth-of-type(2){
+            order: 2;
+        }
+        div.item:nth-of-type(3){
+            order: 4;
+        }
+        div.item:nth-of-type(4){
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="item"><a href="#"> 1</a></div>    <!-- 구조를 바꾸는 것이 아닌 시각적으로 순서만 바꿈-->
+        <div class="item"><a href="#">2</a> </div>
+        <div class="item"><a href="#"> 3</a></div>
+        <div class="item"><a href="#">4</a> </div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+</body>
+</html>

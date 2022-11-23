@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.tinyTweaks.html</title>
+
+    <style>
+
+        /*
+            tinyTweaksdms 다른 패턴들과 달리 레이아웃의 변화는 거의 없는 
+            단순한 디자인에 적합하다. 
+            레이아웃은 변화하지 않으며, 텍스트의 크기, 이미지의 크기가 
+            디바이스의 크기에 따라 변화하는 정도  
+            원페이지형 레이아웃이나, 레이아웃이 거의 없는 블로그형 사이트에 많이
+            사용된다. 
+
+            rem을 사용하는 이유는 사용성의 편리를 위해 한번에 사용 
+
+        */
+
+        body,html{
+            font-size:  0.5952vw /*1rem = 10px   , 0.5952=(10/1920(해상도))*100*/
+            /* 
+            폰트사이즈를 반응형으로 변경하기 
+            기준이 되는 페이지의 width을 선정 (모바일 기준, pc기준)
+            body에 적용할 폰트 사이즈의 수치 10px 
+            ex)1920 기준 vw(viewport width를 사용해서 브라우저의 가로 크기에 대응하도록 한다. )
+            */
+
+        }
+
+        .wrapper{
+            width: 100%;
+            background: pink;
+            text-align: center;
+            padding: 2rem 0px;
+        }
+        h1{
+            font-size: 5rem;
+        }
+        .text{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .text02{
+            font-size: 2rem;
+        }
+        
+        @media screen and (max-width:980px) {
+            body,html{
+                font-size: 1.02040816326531vw;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        
+        <h1> Lorem ipsum dolor sit amet.</h1>
+        <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+             Ullam dignissimos minus quas id libero sapiente nam porro voluptatibus<br> 
+             quae eveniet ex cum, dolores pariatur veniam reiciendis,<br>
+             labore incidunt
+              suscipit quidem.
+        </p>
+
+        <p class="text02">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>
+            Similique iusto quos perferendis. Nisi quae, nostrum iste dignissimos<br>
+             labore ipsam explicabo quidem itaque doloribus beatae, amet, deleniti<br>
+             odit accusantium neque aliquid!
+        </p>
+    </div>
+</body>
+</html>

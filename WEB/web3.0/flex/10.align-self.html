@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.align-self.html</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* 
+        align-self
+        align-items가 container에 지정하는 자식요소 정렬 속성이라면, 
+        self속성은 해당 아이템에 개별적으로 정렬하는 요소 
+        기본적으로 자식요소는 align-items값을 상속받도록 되어있다.
+        align-items보다 항상 높은 우선순위를 가지고 있다. 
+        기본값은 auto   
+
+
+        */
+        div.container{
+            display: flex;
+            height: 500px;
+            align-items: center;
+        }
+        div.item:nth-of-type(2){
+            align-self: flex-start;
+        }
+    </style>
+
+</head>
+<body>
+    
+</body> 
+    <div class="container">
+        <div class="item"> 1</div>
+        <div class="item"> 2</div>
+        <div class="item"> 3</div>
+        <div class="item"> 4</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+</html>

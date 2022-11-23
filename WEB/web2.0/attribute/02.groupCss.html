@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.groupCss.html</title>
+    <style>
+        /*
+
+        css중에는 속성-세부속성(ex: margin-top)은 대부분 그룹속성을 가지고 있다. 
+
+        그룹속성은 속성마다 다르지만 몇가지 규칙을 가지고 있다. 
+        공통적으로 가지고 있는 것은 '순서'이다. 
+        
+
+        특히 속성값의 단위가 모두 같은 속성일 경우 순서가 매우 중요하다. 
+        margin,padding
+
+        값이 1개일 경우: 4방향 모두 적용
+        값이 2개일 경우: 첫번째 값: 위, 아래 / 두번째 값: 왼, 오
+        값이 3개일 경우: 첫번째 : 위, 아래 / 두번째: 왼, 오 / 세번째: 아래
+        값이 4개일 경우: 위, 오, 아, 왼 순서 (시계방향)
+       
+       
+        */
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            padding: 100px 20px 50px 200px;        
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        box
+    </div>
+</body>
+</html>

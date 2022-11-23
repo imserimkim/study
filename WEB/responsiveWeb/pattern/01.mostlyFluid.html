@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mostlyFluid</title>
+</head>
+<body>
+    <style>
+        /* 
+        mostlyFuid : 유동형 레이아웃 
+        가장 많이 사용되는 패턴 기준이 되는 사이즈를 하나 채택 후 가운데 정렬을 
+        기준으로 하며, 기준화면보다 클 때에는 좌우에 여백을 둔다. 
+
+        기준보다 작아질 때에는 컨텐츠들을 아래로 내려서 쌓는 레이아웃으로 바꾼다. 
+
+        태블릿으로 내려갈수록 컨텐츠의 좌우 여백은 없어지는 편이다. 
+        모바일에서는 화면의 양 끝에 컨텐츠가 가려지지 않도록 약간의 여백은 발생할 수 있다. 
+        심플하고, 모든 분기점에서 완벽하게 제어할 수 있는 패턴 중 하나 
+
+
+
+        */
+
+        body,html,h1{
+            margin: 0px;
+            padding: 0px;
+        }
+        .clearfix:after{
+            content:"";
+            clear: both; /*right left 양방향 */
+            display: block;
+        }
+
+        div.wrapper{
+            width: 1200px;
+            background: coral;
+            margin: 0px auto;
+        }
+
+        header{
+            width: 84%;
+            height: 100px;
+            background-color: pink;
+            margin: 0px auto;
+            position: relative;
+        }
+
+        h1{
+            width: 150px;
+            height: 70px;
+            background: gray;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+
+        nav{
+            width: 600px;
+            height: 100%;
+            background: gray;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+        }
+
+        section.section01{
+            width: 100%;
+            background: skyblue;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+       
+        section.section01 div{
+            float: left;
+            height: 200px;
+        }
+
+        div.content01{
+            width: 35% ;
+            background: gray;
+            margin-right: 5%;
+
+        }
+
+        div.content02{
+            width: 60%;
+            background: pink;
+        }
+        section.section02{ 
+        padding: 12px;
+        background: gray;
+        width: 100%;
+        box-sizing:border-box;
+         }
+
+         section.section02 div{
+        float: left;
+        height: 200px;
+         }
+
+   
+        div.content03{
+        width: 33.3%;
+        background-color: aqua
+
+        }
+         div.content04{
+            width: 33.3%;
+        background-color: pink;
+         }
+        div.content05{
+            width: 33.3%;
+        background: skyblue;
+        }
+
+        @media screen and (max-width:1199px){
+            div.wrapper{
+                width: 100%;
+
+            }
+        }
+
+        @media screen and (max-width:979px){
+            header{
+                width: 100%;
+                }
+            nav{
+                display: none;
+            }
+
+            div.content01,
+            div.content02{
+            width: 100%;
+
+            }
+            div.content01{
+            margin-right: 0px;
+             }
+             div.content03,
+             div.content04{
+                width: 50%;
+             }
+             div.content05{
+                width: 100%;
+             }
+    }
+
+    @media screen and (max-width:480px){
+            div.content03, 
+            div.content04{
+                width: 100%;
+            }
+    }
+
+
+
+      
+    </style>
+</body>
+
+<div class="wrapper">
+    <header>
+        <h1>logo</h1>
+        <nav>nav</nav>
+    </header>
+
+    <main>
+        <section class="section01 clearfix">
+            <div class="content01">content01</div>
+            <div class="content02">content02</div>
+        </section>
+
+        <section class="section02 clearfix">
+            <div class="content03">content03</div>
+            <div class="content04">content04</div>
+            <div class="content05">content05</div>
+        </section>
+    </main>
+
+    <footer>
+        footer
+    </footer>
+</div>
+</html>

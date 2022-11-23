@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.container{
+            padding: 12px;
+            background: gray;
+            display: flex;
+            flex-direction: row;
+
+            /* 
+            flex-direction : 배치방향 
+
+            row: 가로축(기본값) 왼쪽부터 오른쪽으로 진행 
+            row-reverse : 오른쪽부터 왼쪽 
+            column : 세로방향 위에서 아래로 진행 
+            column-reverse : 아래에서 위로 진행 
+            */
+        }
+        div.item{
+            width: 33%;
+            padding: 10px;
+            border: solid 2px black;
+            background-color: pink;
+        }
+
+        @media screen and (max-width:768px){
+            div.container{
+                flex-direction: column;           /* 정렬에 대한 값을 바꿔줄때 사용*/
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item"> aaaaaaaaaaaa</div>
+        <div class="item"> bbb</div>
+        <div class="item"> cccccc</div>
+        <div class="item"> dddddddddd</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+
+</body>
+</html>

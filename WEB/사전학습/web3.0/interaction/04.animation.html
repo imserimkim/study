@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        div.item{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            animation: boxAni 1000ms, boxAni02 2000ms;
+          
+
+            /*
+            animation-name: boxAni, boxAni02;
+            animation-duration: 1000ms, 2000ms;         << 그룹 속성 
+
+            /*
+            animation-name: boxAni 3000ms 1000ms alternate infinite ease-in-out;    << 여러개의 속성
+            animation-play-state: paused;                 << 애니메이션 상태 멈춤
+
+           /*  animation-duration: 5000ms;      
+            animation-delay: 1000ms;  */
+
+             /*   그룹속성: name(필수) duration(필수) duration(생략가능) direction(생략가능) count(생략가능) dirextion(생략가능) 
+            timingfuntion(생략가능) fill-mode, play-state, timeline은 그룹에 포함하지 않음 
+            순서는 바껴도 되지만 duration과 delay는 순서에 조심한다. 
+            값이 하나면 duration값만 값이 두개면 앞에 있는 값은 duration  */
+
+           /* animation-iteration-count: infinite;     /*반복횟수
+            animation-direction: alternate;
+            animation-fill-mode:backwards;   */
+        }
+        /* div.item:hover{
+
+            animation-play-state: running;         << hover를 이벤트로 넣기 
+        }
+        */
+
+        .box01{
+            background: lightcoral;
+            animation-fill-mode: none;
+            animation-timing-function: ease;
+        }
+        .box02{
+            background: pink;
+            animation-fill-mode: backwards;
+            animation-timing-function: ease-in;
+        }
+        .box03{
+            background: lightblue;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+        .box04{
+            background: lightgray;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+        }
+        .box05{
+            background: lightgreen;
+            animation-timing-function: linear;
+
+        }
+        .box06{
+            background: plum;
+        }
+
+        /* 
+
+        애니메이션은 html 요소에 적용되는 css를 다른 css로 제어해서 
+        부드럽게 전환되는 효과를 주며, transition과 유사한 환경을 가지고 있지만 
+        세부적인 컨트롤, 단독적으로 실행할 수 있는 특징을 가지고 있다.(상위개념)
+
+        이벤트에 적용 -> transition 
+        페이지 로딩시 바로 실행 -> animation 
+
+        transition은 단순한 요소의 속성변화가 목적이라면 
+        animation은 속성하나에 스토리(프레임)을 구성해서 스토리내에서 
+        세부적인 움직임을 css를 이용해서 제어할 수 있다.
+        
+        -name : keyframes에 연결하는 가장 중요한 속성(필수속성)
+        네이밍은 임의대로 작성하되, 목적에 맞는 네이밍을 하도록 한다.
+        
+        -duration 진행시간(필수속성)
+        -delay 지연시간 
+
+        -iteration-count: 반복횟수 
+        기본값은 1회만 실행하며, 지정된 숫자만큼 실행한다. 
+        *무한반복 위해 9999와 같은 숫자보다는 infinite로 설정한다. 
+        (초기 메모리 확보 유무가 달라짐)
+
+        -direction: 반복중일때 진행방향 설정 
+
+        normal은 기본값 : 0% 시작해서 100% 종료 
+        reverse : 100% 시작해서 0% 종료 
+        alternate : 홀수번(normal), 짝수번은(reverse)로 왕복운동 
+
+        fill-mode : 애니메이션이 대기중이거나 종료상태일때 스타일 지정
+        무한반복이거나 delay가 없으면 확인할 수 없다. 
+
+        none 기본값
+            대기: 시작프레임에(0%)에 설정된 스타일을 작용하지 않는다. 
+            종료: 실행 전 스타일을 되돌린 후 종료 
+
+        
+        backwords: 
+            대기: 시작 프레임에(0%)에 설정된 스타일을 적용하고 대기 
+            종료: 실행 전 스타일 되돌리고 종료 
+
+        forwards:
+            대기: 시작 프레임에 설정된 스타일을 적용하지 않음 
+            종료: 종료되는 프레임의 스타일을 적용하고 종료 
+
+        
+        both: 
+            대기: 시작 프레임에 설정된 스타일 적용후 대기 
+            종료: 종료 프레임에 설정된 스타일 적용후 종료 
+
+        
+
+        */ 
+
+        @keyframes boxAni{
+            0%{
+                background-color: black;
+                width: 200px;
+            }
+    
+
+            50%{
+                background-color: pink;
+                width: 200px;
+            }
+            100%{ 
+                background: rgb(80, 80, 183);
+                width: 100px;
+            }
+        }
+
+        @keyframes boxAni02{
+            100%{
+            background-color: yellow;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="item box01">box01</div>
+    <div class="item box02">box02</div>
+    <div class="item box03">box03</div>
+    <div class="item box04">box04</div>
+    <div class="item box05">box05</div>
+    <div class="item box06">box06</div>
+
+</body>
+</html>

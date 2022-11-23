@@ -1,0 +1,50 @@
+<!DOCTYPE html>     <!-- html 버전을 알려주는 태그 -->
+<html lang="ko"> <!--언어의 설정 en = 영문, ko = 한국어 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 제목입니다.</title>         <!-- 사이트의 제목 -->
+</head>
+<body>
+  <!--
+    태그들 중 대부분은 여는 태그와 닫는태그로 이루어져 있으며(일부 제외), 
+    모든 태그들은 inline 속성과 block 속성중에 하나를 가지고 태어난다. 
+
+    block 속성
+    = 내부에 컨텐츠의 크기와 관계없이 가로로 한줄을 다 채우고 있는 속성의 태그이다. 주로 다른 태그들을 
+    담을 수 있는 목적을 포함한다. (대표적으로 div)
+
+    inline 속성
+    = 컨텐츠의 크기 외에 영역을 가질 수 없는 속성 
+    보통 텍스트나 이미지와 같으 컨텐츠만 들어가는 태그가 많다. 
+    
+    block속성 안에 inline이나 block 속성이 들어갈 수 있다. 
+
+    inline속성안에는 block속성이 들어갈 수 없다. 
+
+  -->
+  
+<div> div는 block 속성의 태그입니다. </div>
+<div> div는 block 속성의 태그입니다. </div>
+<div> div는 block 속성의 태그입니다. </div>
+<div> div는 block 속성의 태그입니다. </div>
+
+<span>span은 inline 속성의 태그입니다.</span>
+<span>span은 inline 속성의 태그입니다.</span>
+<span>span은 inline 속성의 태그입니다.</span>
+<span>span은 inline 속성의 태그입니다.</span>
+
+<div>
+    <div>block속성입니다.</div>
+    <span>inline속성입니다.</span>
+</div>
+
+
+<span>
+    <div>block속성입니다.</div>
+    <span>inline속성입니다.</span>
+</span>
+
+</body>
+</html>

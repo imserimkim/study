@@ -1,0 +1,75 @@
+
+
+log - Brodway
+
+<폰트>
+fashion ( arial 80 f5f4a5)
+
+title - 32 - #000
+basic font - 16 #555
+
+여백 120
+
+
+헤더 1670    (86%)
+컨텐츠 1280 (66%)
+
+여백 120
+문서구조 
+img
+css- common.css/index.css
+index.html
+
+<header>
+space-between
+
+<img>
+ background                                             // 이미지가 슬라이드 될때는 img  
+
+
+<main> 
+<div>
+	<figure>
+
+
+폰트 transfonter
+-> WOFF2 최근 웹표준상 WOFF2를 많이 사용
+
+css
+-> common.css
+-> index.css
+-> font.css
+ 
+
+
+
+
+--------------------------------------------11/16
+
+<< 반응형 media 수정 >>
+
+- 모든 css 파일에 media값 넣어주기
+- 수정할 부분 제외한 태그에 display:none; 걸어주기
+- 변경사항이 필요없는 영역은 과감하게 지우기  
+- h 태그는 해당 컨텐츠의 타이틀에만 넣어주기
+
+
+* 개발자모드에서 코드 확인 -> 줄번호 확인 ->  ctrl+g : 줄 번호 검색 
+
+
+content 가로 정렬 세로형으로 바꾸기
+=>  display:flex -> display:block; 으로 변경
+width값 : 100% 
+
+img 가로 정렬 밑으로 떨어트리기
+=> display: flex 밑
+릳flex-wrap: wrap;으로 변경
+
+
+
+- variable
+- nexting
+- 
+
+
+

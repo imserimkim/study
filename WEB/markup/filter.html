@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    <!-- filter.html -->
+    <div class="filter-1">
+        <img src="image/Group14.png" alt="">
+        <style>
+            .filter01 > img{
+                width: 300px;
+            }
+            .filter-1:hover > img{
+                filter: grayscale(100%)
+            }
+        </style>
+
+        <p>filter - blur</p>
+        <style>
+            .filter-1 > p{
+                font-size: 5rem;
+                transition: 0.5s;
+                filter:blur(10px);
+            }
+            .filter-1:hover > p {
+                filter:blur(0px);
+            }
+        </style>
+
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m38.6 16.25-2.15-5-5.2-2.3 5.2-2.25 2.15-4.75 2.15 4.75 5.2 2.25-5.2 2.3Zm0 29.75-2.15-4.8-5.2-2.25 5.2-2.25 2.15-5.05 2.15 5.05 5.2 2.25-5.2 2.25Zm-21.95-7.7-4.6-9.85L2 23.95l10.05-4.5 4.6-9.8 4.65 9.8 10 4.5-10 4.5Zm0-7.4 2.4-4.8 4.9-2.15-4.9-2.15-2.4-4.8-2.35 4.8-4.95 2.15 4.95 2.15Zm0-6.95Z"/></svg>
+        <style>
+            svg{
+               /* box-shadow: 10px 10px 10px gold; */
+                filter:drop-shadow(10px 10px 10px gold);
+            }
+        </style>
+
+        <div>
+            <h3>blend-mode</h3>
+        </div>
+        <style>
+            .filter-1 > div{
+                position: relative;
+            }
+            .filter-1 > div::after {
+                content: "";
+                width: 100%; 
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: -100%;
+                background-color: #fff;
+                z-index: -1;
+                transition: 0.5s;
+            }
+            .filter-1 > div:hover::after{
+                top:0%;
+            }
+            .filter-1 > div h3{
+                color: #ddd;
+                mix-blend-mode: difference;
+                font-size: 5rem;
+            }
+        </style>
+
+    </div>
+</body>
+</html>

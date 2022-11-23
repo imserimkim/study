@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 반응형</title>
+
+    <style>
+
+        div.videoWrapper{
+            width: 100%;
+           
+
+        }
+        div.video{
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding-top: 56.25% ;    
+            
+            /* 
+            560 size 1080/1920=0.5626
+            
+
+            size는 동영상 속성마다 다름 => {(작은 것)/(큰것)}*100
+            
+            */ 
+        }
+
+
+
+        iframe{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+        }                                   /* 부모요소 높이 값 받아옴 */
+
+        div.videoWrapper02{
+            width: 100%;
+        }
+
+        div.video02{
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding-top: 66.7%;
+        }
+
+        video{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            bottom: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="videoWrapper"> <!-- size : 560, 315  (16:9 비율)-->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/UkRfiosqsvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="videoWrapper02">
+        <div class="video02">
+            <video src="video.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+</body>
+</html>

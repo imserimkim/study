@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 스타일</title>
+
+    <style>
+        div{                         /* 선택자 안의 속성과 값은 {}안에 넣는다. */
+            width: 500px;
+            height: 100px;            
+            background-color: coral;       /* 속성과 값 뒤에 ; 삽입 */
+        }
+        span{
+            width: 500px;
+            height: 100px;                    /* span은 인라인 영역으로 크기의 변화가 없다 */
+            background-color: pink;
+        }
+        p{
+            color: gray;
+
+        }
+        span{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        css스타일의 기본 서식은 선택자와 속성 그리고 값으로 이루어져 있습니다.
+    </div>
+    <span>하나의 선택자에 여러개의 속성이 들어갈 경우 세미콜론(;)으로 구별한다.</span>
+
+    <p>p태그는 <span>문단</span> 태그입니다.</p>
+</body>
+</html>

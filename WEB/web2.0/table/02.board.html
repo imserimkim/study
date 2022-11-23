@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블로 게시판 만들기</title>
+
+    <style>
+        body,html{
+            margin: 0px;
+            padding: 0px;
+        }
+        table{
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+
+        table{
+            width: 1200px;
+            margin: 100px auto;
+        }
+        caption{
+            text-align: left;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        th{
+            border-top: solid 1px black;
+            border-bottom: solid 1px #dddddd;
+            height: 50px;
+        }
+        td{
+            border-bottom: solid 1px #dddddd;
+            height: 50px;
+            text-align: center;
+        }
+
+        .number{
+            width: 100px;
+
+        }
+        .title{
+            width: 700px;
+        }
+        .name{
+            width: 150px;
+        }
+        .date{
+            width: 150px;
+        }
+        .like{
+            width: 100px;
+        }
+        td.title{                   /* 따로 관리해줄 영역만 사용*/
+            text-align: left;
+            text-indent: 20px;      /* 첫줄 들여쓰기 */
+        }
+       td.name,
+       td.date,
+       td.like {
+            color: #dddddd;
+       }
+
+    </style>
+</head>
+<body>
+    
+    <table>
+        <caption>자유게시판</caption>
+
+        <tr>
+            <th class="number">No</th>
+            <th class="title">제목</th>
+            <th class="name">글쓴이</th>
+            <th class="date">작성시간</th>
+            <th class="like">좋아요</th>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="title">infp/강동구 거주.</td>
+            <td class="name">김세림</td>
+            <td class="date">22-11-04</td>
+            <td class="like">55</td>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="title">esftp / 남양주 / 판교가 놓친 인재 / 지금까지 이런 강쥐는 없었다!</td>
+            <td class="name">이주은</td>
+            <td class="date">22-11-04</td>
+            <td class="like">55</td>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="title">estp / 포항에서온 그녀 / 멋쟁이 / *강남으로 모십니다. 그녀의 화장은 언제 볼 수 있는지?</td>
+            <td class="name">이지영</td>
+            <td class="date">22-11-04</td>
+            <td class="like">55</td>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="title">intj / 노원구 / 똑쟁이 그녀 / 그녀의 브이로그에 출현하는 그날까지 / </td>
+            <td class="name">양정민</td>
+            <td class="date">22-11-04</td>
+            <td class="like">55</td>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="title">infp / 수지 / 룽지엄마 / 개발도 잘하는 디자이너 *잉푸피가 세상을 지배한다.</td>
+            <td class="name">김다운</td>
+            <td class="date">22-11-04</td>
+            <td class="like">55</td>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="title">내용입니다.</td>
+            <td class="name">김세림</td>
+            <td class="date">22-11-04</td>
+            <td class="like">55</td>
+        </tr>
+
+        <tr>
+            <td class="number">1</td>
+            <td class="title">내용입니다.</td>
+            <td class="name">김세림</td>
+            <td class="date">22-11-04</td>
+            <td class="like">55</td>
+        </tr>
+    </table>
+
+</body>
+</html>

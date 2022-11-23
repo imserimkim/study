@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큐브 만들기</title>
+    <style>
+        div.wrapper{
+            width: 250px;
+            height: 250px;
+            perspective: 600px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+
+
+        }
+        /* 포지션 속성으로 가운데 정렬하는 방법 (margin 0px auto는 가로 정렬만 가능)*/ 
+
+        div.cube{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style:preserve-3d; 
+            transition: 3000ms;
+            
+            
+        }
+
+        div.item{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+            line-height: 250px;
+            text-align: center;
+            opacity: 0.6;
+       
+        }
+        .front{
+            background: coral;
+            transform: rotate(0deg) translateZ(125px);
+          
+        }
+        .back{
+            background: skyblue;
+            transform: rotateY(180deg) translateZ(125px);          /* 0도의 반대 180도 */
+           
+        }
+        .right{
+            background: violet;
+            transform: rotateY(90deg) translateZ(125px);
+      
+        }
+        .left{
+            background: lime;
+            transform: rotateY(-90deg) translateZ(125px);         /* 90도의 반대 -90도 */
+        }
+        .top{
+            background: violet;
+            transform: rotateX(90deg) translateZ(125px);
+        }
+        .bottom{
+            background: aquamarine;
+            transform: rotateX(-90deg) translateZ(125px);
+        }
+
+        .cube:hover{
+            transform: rotate3d(1,1,0,360deg);
+            /* rotate3d 각축의 앵글을 정하고 회전  */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">   <!-- 원근감이 들어갈 영역에 대한 설정-->     <!--캔버스-->
+        <div class="cube">                                              <!-- 도화지-->
+            <div class="item front">front</div>
+            <div class="item back">back</div>
+            <div class="item right">right</div>
+            <div class="item left">left</div>
+            <div class="item top">top</div>
+            <div class="item bottom">bottom</div>
+            
+        </div>
+
+
+    </div>
+
+</body>
+</html>

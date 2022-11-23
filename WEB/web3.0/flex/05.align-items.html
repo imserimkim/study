@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.align-items.html</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+        div.container{
+            display: flex;
+            height: 500px;
+            align-items: center;
+            justify-content: center;
+
+            /*
+            
+            align-items: 수직축 방향정렬(justify-conten의 반대 축) 
+            stretch = 부모요소의 높이값을 받아서 길이가 늘어남(기본값)
+            stretch에 다른 값이 들어오면 영역값은 컨텐츠의 영역값으로 바뀌게 된다.
+            flext-start = 시작점 정렬
+            flex-end = 끝점 정렬
+            center = 가운데 
+            baseline = 텍스트의 베이스라인을 기준으로 정렬이 된다(기준이 애매하기
+            때문에 잘 사용하지 않는다.)
+
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"> aaaaaaaaaaaa</div>
+        <div class="item"> bbb</div>
+        <div class="item"> cccccc</div>
+        <div class="item" style="font-size:30px;">ggggg</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+</body>
+</html>

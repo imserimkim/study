@@ -1,0 +1,99 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+div,p,h1,h2,h3,h4,h5,p, figure{margin:0;}
+ul,li{list-style-type: none; margin: 0; padding: 0;}
+img{vertical-align: middle;}
+a{color: #fff; text-decoration: none; cursor: pointer;}    /*cursor 포인터*/
+
+*{box-sizing: border-box}
+
+::after, ::before, a{
+    display: inline-block;
+}
+
+
+header{
+    padding: 28px;
+    width: 100%;
+    height: 156px;
+    background-color: black;
+    div.header-container{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 28px;
+        ul{
+            width: 140px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    
+
+        div.logo{
+        width: 100%;
+        height: 50px;
+    }
+
+
+        ul.menu{
+            display: flex;
+            justify-content: space-between;
+            width: 335px;
+            text-align: center;
+            margin: 0 auto;
+            
+        }
+    
+    
+}
+// footer
+
+
+// footer
+
+
+
+
+
+// footer
+
+
+
+
+footer{
+    div.service-container{
+        a{}
+        figure{
+            img{}
+            figcaption{}
+        }
+    }
+
+    div.sns{
+        div.sns-box{
+            h5{}
+            a{}
+        }
+    }
+
+    div.footer-box{
+        p.footer-copyright{}
+        p.footer-company{}
+    }
+}
+
+
+
+
+
+
+// footer
+
+
+
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.selector.html</title>
+    <style>
+
+        *{
+            font-size: 30px;         
+            color: gray;
+        }
+        /* *식별자는 보통 최상위에서 태그들이 가지고 있는 기본 css를 reset 시키는 용도로 
+        가끔 사용된다.
+        */
+
+        .font{
+            font-size: 40px;
+        }
+        p.font{
+            font-size: 10px;
+        }
+
+        p span{
+            color: green;
+        }
+        p > span {
+            color: aquamarine;            /* 직계자식 */
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <!--
+
+        
+        선택자의 종류
+
+        1. * = 페이지에 모든 태그를 지칭함, 
+        페이지에 있는 모든 태그를 순차적으로 스캔하기 때문에 과부하의 위험을 
+        가지고 있다.  잘 사용하지 않는 선택자.
+
+        2. 태그선택자 = 태그명만 넣어서 선택
+
+        3. 선택자, 선택자 = 동시선택자 
+        한번에 여러개의 태그에 동일한 값이 들어갈 경우 관리가 용이하도록 
+        한번에 선택하는 방법 
+        ex)div, div.red, div#red{} 
+
+        4. 선택자 선택자 = 하위 선택자
+        안에 작성된 선택자를 기준으로 내부에 있는 선택자를 모두 지칭(자식, 자손 포함)
+
+        5. 선택자 > 선택자 = 직계자식선택자
+        앞에 작성된 선택자를 기준으로 바로 아래 있는 선택자를 참조
+        (자손은 참조하지 않으며, 자식만 참조)
+
+        id[100점] > class[10점] > 태그명[1점] > *[0점]   (높으수록 최우선)
+
+
+    -->
+
+
+
+<div class="font">div태그입니다.</div>
+<p class="font">p태그입니다.</p>
+<span class="font">span태그입니다.</span>
+ 
+
+<p> 
+    저는<span>span태그<span>입니다.</span></span>
+</p>
+</body>
+</html>

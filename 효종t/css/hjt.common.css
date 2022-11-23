@@ -1,0 +1,513 @@
+html, body, a, div, h1, p, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  z-index: 88;
+  height: 156px;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px;
+}
+header .top p {
+  font-size: 16px;
+  color: #fff;
+}
+header .top a img {
+  display: block;
+  height: 50px;
+}
+header .top div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .top div a {
+  margin: 0 8px;
+}
+header .top div a img {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+header .bottom ul {
+  margin: 0 auto;
+  width: 27%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .bottom ul li a {
+  font-size: 18px;
+  color: #fff;
+}
+
+.banner {
+  margin-top: 156px;
+  height: 845px;
+  background-image: url(../img/Tissot_models2\ 2.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner a {
+  display: block;
+  margin: 0 20px;
+}
+
+section {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+section .text {
+  padding: 94px 0;
+  text-align: center;
+}
+section .text h2 {
+  font-size: 28px;
+  color: #000;
+}
+section .text h3 {
+  font-size: 22px;
+  color: #000;
+  font-weight: normal;
+}
+section .video img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.slide {
+  max-width: 1500px;
+  margin: 200px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.slide .catte {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slide .catte a {
+  font-size: 28px;
+  color: #000;
+  font-weight: bold;
+}
+.slide .shop {
+  width: 100%;
+  margin: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slide .shop a {
+  font-size: 33px;
+  color: #000;
+  font-weight: bold;
+}
+.slide ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slide ul li {
+  margin: 0 23px;
+  text-align: center;
+  width: 15%;
+}
+.slide ul li a {
+  display: block;
+}
+.slide ul li a img {
+  width: 100%;
+  display: block;
+}
+.slide ul li a h5 {
+  font-size: 16px;
+  color: #000;
+  font-weight: normal;
+}
+.slide ul li a p {
+  font-size: 14px;
+  color: #000;
+  font-weight: normal;
+}
+.slide ol {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slide ol li {
+  margin: 0 20px;
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.slide ol .selec {
+  background-color: #000;
+  border: ra;
+}
+
+.ca {
+  max-width: 1500px;
+  margin: 0 auto 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ca .tB {
+  text-align: center;
+}
+.ca .tB h6 {
+  font-size: 36px;
+  color: #000;
+  font-weight: bold;
+}
+.ca ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ca ul li {
+  width: 15%;
+  margin: 0 10px;
+  text-align: center;
+}
+.ca ul li img {
+  width: 100%;
+}
+.ca ul li p {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+}
+
+.news {
+  background-color: rgba(245, 245, 245, 0.4);
+  width: 100%;
+  height: 230px;
+  margin-bottom: 200px;
+}
+.news .bWrap {
+  max-width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news .bWrap .nB {
+  width: 50%;
+  padding: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.news .bWrap .nB::after {
+  content: "";
+  height: 40%;
+  width: 2px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.news .bWrap .nB:nth-child(2):after {
+  display: none;
+}
+.news .bWrap .nB h4 {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+.news .bWrap .nB p {
+  font-size: 18px;
+  color: #000;
+}
+.news .bWrap .nB label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news .bWrap .nB label input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid #000;
+  text-indent: 15px;
+}
+.news .bWrap .nB label a {
+  margin: 20px;
+}
+.news .bWrap .nB label a img {
+  display: block;
+  height: 22px;
+}
+
+.new {
+  max-width: 1500px;
+  margin: 0 auto 200px;
+  text-align: center;
+}
+.new .teB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.new .teB h5 {
+  font-size: 36px;
+  color: #000;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.new .teB a img {
+  display: block;
+}
+.new ul {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.new ul li {
+  width: 20%;
+}
+.new ul li img {
+  width: 100%;
+  display: block;
+}
+.new ul li h4 {
+  margin-top: 40px;
+}
+
+.botS {
+  width: 100%;
+  padding: 40px 0;
+  background: rgba(245, 245, 245, 0.4);
+}
+.botS .wr {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.botS .wr .bx {
+  width: 23%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.botS .wr .bx a {
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+}
+.botS .wr .bx a img {
+  width: 100%;
+  display: block;
+}
+.botS .wr .bx a p {
+  margin: 20px 0;
+}
+
+footer {
+  width: 100%;
+}
+footer .whi {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .whi p {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+footer .whi ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .whi ul li {
+  margin: 18px;
+}
+footer .whi ul li a img {
+  display: block;
+}
+footer .bla {
+  background-color: #000;
+  padding: 30px 0;
+  text-align: center;
+}
+footer .bla p:nth-child(1) {
+  font-size: 14px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+footer .bla p:nth-child(2) {
+  font-size: 16px;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.empty {
+  height: 156px;
+}
+
+.subT {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.subT img {
+  width: 50%;
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.subT .tex {
+  width: 50%;
+}
+.subT .tex div {
+  margin: 0 auto;
+  width: 70%;
+}
+.subT .tex div h2 {
+  font-size: 32px;
+  color: #000;
+  font-weight: bold;
+}
+.subT .tex div p {
+  font-size: 16px;
+  color: #000;
+}
+
+.bbBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bbBox .sideMenu {
+  width: 240px;
+  height: 400px;
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 70%;
+  transform: translateY(-50%);
+}
+.bbBox .sideMenu h2 {
+  font-size: 16px;
+  color: #000;
+}
+.bbBox .sideMenu .g {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+.bbBox .sideMenu .g p {
+  font-size: 16px;
+  color: #000;
+}
+.bbBox .sideMenu .g img {
+  display: block;
+  height: 22px;
+}
+.bbBox .sideMenu ul li {
+  padding: 6px;
+}
+.bbBox .sideMenu ul li a {
+  font-size: 16px;
+  color: #000;
+}
+.bbBox .shopp .wrp {
+  max-width: 80%;
+  margin: 0 0 300px 240px;
+}
+.bbBox .shopp .wrp ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bbBox .shopp .wrp ul li {
+  margin: 20px 0;
+  width: 18%;
+}
+.bbBox .shopp .wrp ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bbBox .shopp .wrp ul li a img {
+  display: block;
+  width: 100%;
+}
+.bbBox .shopp .wrp ul li a h2 {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}
+.bbBox .shopp .wrp ul li a h4 {
+  font-size: 16px;
+  color: #000;
+}
+.bbBox .shopp .wrp ul li a p {
+  font-size: 16px;
+  color: #000;
+}
+.bbBox .shopp .wrp ul li a .but button {
+  width: 65px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #fff;
+  margin: 10px;
+  background-color: #000;
+}/*# sourceMappingURL=hjt.common.css.map */

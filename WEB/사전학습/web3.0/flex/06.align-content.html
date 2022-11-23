@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-content</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*
+        aligb-content 
+        두 줄 이상의 컨텐츠를 정렬하는 속성 
+
+        align-items와 다른점은 
+        align-items는 한줄에서만 사용하며 두 줄이상일 경우 컨텐츠 사이의 
+        여백은 설정할 수 없다.
+
+            wrap 속성에 따라 align-content의 속성이 우선 적용된다.  
+            (wrap일때에는 content를 우선적용, nowarp는 content 미적용)
+
+            strecth = 기본값
+            flex-star: 시작점 정렬 
+            flex-end: 끝점 정렬 
+            center : 가운데 
+            space-around : 둘래에 여백을 균등하게 분배
+            space-between: 자식 자신에 여백을 균등하게 분배 
+            space-evenly: 균등하게 정렬(ie 미지원)
+        
+        
+            */
+
+        div.container{
+            display: flex;
+            height: 500px;
+            width: 50%;
+            flex-wrap: wrap;
+            align-items: center;
+       
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="item"> aaaaaaaaaaaa</div>
+        <div class="item"> bbb</div>
+        <div class="item"> cccccc</div>
+        <div class="item" style="font-size:30px;">ggggg</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+</body>
+</html>

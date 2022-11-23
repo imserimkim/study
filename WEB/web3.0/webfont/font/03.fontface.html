@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-face</title>
+
+    <style>
+        /* 
+        폰트를 직접 등록해서 사용할 때에는 여러개의 확장자가 명이 필요하다. 
+        브라우저마다 엔진이 다르기 때문에 각각 맞는 확장자명을 등록해야 한다. 
+
+        ttf : 트루타입폰트 
+        가장 기본적으로  사용하는 폰트지만 웹에서는 압축률 문제 때문에 활용되지 않는다. 
+        크롬, 사파리, 파이어폭스, 오페라, 익스 지원
+
+        otf : 오픈타입포멧
+        ttf를 기반으로 하는 폰트(크롬, 사파리, 파폭, 오페라)
+
+        woff : 웹 오픈 타입 폰트 포맷
+        웹에서 사용하도록 만든 폰트
+        압축률, 구현률이 웹에 가장 최적화시킨 폰트
+        w3c에서 사용하도록 권고하는 포맷 
+        (모든 브라우저 지원, 익스는 하위버전(6~8버전)제외)
+
+        eot : 임베디드 오픈타입 폰트 
+        ms에서 자체적으로 만든 폰트(익스만 지원)
+
+        
+
+        */
+
+        @font-face{
+            /* font를 생성하는 css */
+            font-family: 'fun flow';
+            /* 지정할 폰트명을 직접 입력
+            폰트명을 직접 등록하기 때문에 사용할 이름도 직접 선언할 수 있다. 
+            한글,띄어쓰기 가능(띄어쓰기 할때에는 반드시 ""나 ''로 묶어줄 껄)
+            */
+
+            src: url("font/FUNFLOW.eot");
+            /*ie9버전 호환 대응모드 
+            익스 하위버전에서 접속시에 eot글꼴만 따로 요청해서 적용하도록 하기 위해서 
+            다른 폰트보다 먼저 선언한다. 
+            하위버전에 대응을 안하거나 ie를 고려하지 않는다면 생략해도 된다. 
+            */
+            src : local(※), 
+            url("font/FUNFLOW.woff") format('woff');
+            /* 
+            local() 외부파일을 참조하기전에 사용자 컴퓨터 local에 있는 글꼴을 먼저 참조하도록 하는데 
+            특수문자를 사용하는 이유는 없는 글꼴을 넣어서 강제적으로 설정해놓은 
+            폰트를 다운받도록 하기 위함이다. 
+            mac os에서는 2byte문자열을 처리하지 못하기 때문
+
+            format() : 값을 작성하면 이 형식을 지원하는 브라우저에서만 해당 폰트를 다운받는다. 
+            format이 생략되어 있다면 모든 브라우저에서 폰트를 내려받게 된다. 
+
+            선택속성
+            font-weight
+            font-size
+
+            폰트 다운 받는 곳 
+            영문: https://www.dafont.com/
+            무료 / 유료
+
+            국문: 블로그(비추) / 눈누폰트 
+            무료(서버가 연결되는 개념이 아니라 링크를 연결하기 때문에 링크주소가 바뀌면 다운받을 수 있다. )
+
+            */
+            
+        }
+
+        p{
+            font-family: 'fun flow', sans-serif;
+            /* 글꼴을 불러올때 보통 여러개의 이름을 입력하는 경우는 같은 글꼴이여도 각자의 컴퓨터에 
+            파일명이 다른 경우가 있다. 여러가지의 파일명을 입력하여 찾도록 하는 방법이며, 제일 
+            마지막에는 폰트의 기본 스타일(serif, sans-serif, ,,,등등)를 넣어서 같은 폰트는 아니더라도 비슷한 
+            스타일을 가진 폰트를 불러서 분위기를 통일시키기 위해서 불러온다. */ 
+        }
+
+        @font-face{
+            font-family: 'jeju';
+
+            src: url("font/EF_jejudoldam.eot");
+
+            src : local(※), 
+            url("font/EF_jejudoldam.woff") format('woff');
+          
+
+        }
+
+        p.jeju{
+            font-family: 'jeju';
+           color: green;
+        
+        }
+        span{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor</p>
+    <p class="jeju"><span >맨또롱또똣</span> would you like dongne saramdeul 
+        젲 젳 젣 젷 젴 젵 젶 줗 줒 줓 
+    </p>
+</html>

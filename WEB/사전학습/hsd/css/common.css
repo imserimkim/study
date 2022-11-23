@@ -1,0 +1,736 @@
+
+ /* * {
+    box-sizing: border-box;
+}
+ */
+           
+
+
+
+
+body, html{
+    font-family: 'Noto Sans KR', sans-serif;         /*폰트설정*/
+    background: gray;
+}
+
+.inner{
+    width: 1170px;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+}
+
+.hidden{
+    width: 1px;;
+    height: 1px;
+    /* left: -9999px; */
+    position: absolute;                     /* hidden 공식 암기 */ 
+    overflow: hidden;
+    clip: rect(0px 0px 0px 0px);
+    margin: -1px;
+   
+}
+
+/* 
+ir기법 
+image replace
+
+1. text-index : -9999px
+2. left: -9999px   << 더 나은 방법
+메모리 과부하 문제로 둘 다 사용하지 않음 
+*/
+
+/*header*/
+header.header-container{
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: transparent;
+    z-index: 999;
+}
+
+div.header-top-container{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.header-top-container ul{
+    display: flex;
+}
+
+ul.header-login li{
+    position: relative;
+}
+
+ul.header-login li:after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 10px;
+    background: #dddddd;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul.header-login li a{
+    font-size: 11px;
+    display: block;
+    color: #ffffff;
+    padding: 9px 14px;
+
+}
+
+ul.header-sns{
+    padding: 8px 24px 8px 12px;
+}
+ul.header-sns li{
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+}
+ul.header-sns li:last-child {
+    margin-right: 0px;
+}
+ul.header-sns li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/icon_sns_01.png");  /* ../ => 상위폴더로 올라간다 */
+    background-repeat: no-repeat;
+    background-size: 56px 14px;
+}
+
+
+ul.header-sns li:first-child >a {
+    background-position: -28px 0px;
+
+}
+
+
+ul.header-sns li:last-child >a {
+    background-position: -42px 0px;
+}
+
+/*hBottom*/
+div.header-bottom-container{
+    width: 100%;
+    height: 90px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+h1.logo{
+    width: 109px;
+    height: 47px;
+    background-image: url("../images/h1_logo.png");
+    background-repeat: no-repeat;
+
+}
+
+
+
+nav.gnb{
+    height: 100%;    /* 메뉴 위아래 앵커를 생성하는 코드 */
+}
+
+ 
+
+nav.gnb ul{
+    display: flex;
+    height: 100%;
+
+}
+
+nav.gnb ul li{
+    padding: 0px 30px;
+    height: 100%;
+}
+
+nav.gnb ul li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+nav.gnb ul li>a:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 7px;
+    background-color: gold;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 250ms;
+    transform: scaleX(0);     /*scale로 width값 삭제*/
+}
+
+nav.gnb ul li:hover a:after{
+     transform: scaleX(1); 
+}
+
+nav.gnb ul li:hover a{
+    color: gold;
+}
+
+
+
+
+div.mobile-btn{
+    width: 25px;
+    height: 22px;
+
+}
+div.mobile-btn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 300ms;
+}
+div.mobile-btn a span{
+    display: block;
+    width: 100%;
+    height: 4px;
+   background: #333;
+   position: absolute;
+   left: 0px;
+   transition: 250ms;
+}
+
+span.line01{
+    top: 0px;
+}
+span.line02{
+    top: 9px;
+}
+span.line03{
+    top: 18px;
+}
+
+
+div.mobile-btn a:hover span.line01{
+    top:9px;
+    transition-delay: 300ms;
+}
+
+div.mobile-btn a:hover span.line02{
+    transform: scaleX(0);
+}
+
+div.mobile-btn a:hover span.line03{
+    transform: rotate(90deg);
+    top: 9px;
+    transition-delay: 300ms;
+}
+
+div.mobile-btn a:hover{
+    transform: rotate(45deg);
+    transition-delay: 650ms;
+}
+
+/*visual*/
+div.visual-container{
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+div.visual-list{
+    width: 100%;
+    height: 100%;
+}
+div.visual-item{
+    width: 100%;
+    height: 100%;
+}
+
+div.visual-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/visual01.jpg") no-repeat center center / cover;
+}
+
+div.visual-control-container{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    overflow: hidden;
+
+    /* background-color: coral; */
+}
+
+div.visual-control-container div.inner{
+    display: flex;
+    align-items: center;
+}
+
+div.dot-container ul{
+    display: flex;
+    align-items: center;
+
+}
+
+div.dot-container ul li{
+    width: 50px;
+    height: 4px;
+    margin-right: 8px;
+    
+}
+div.dot-container ul li:last-of-type{
+    margin-right: 0px;
+}
+
+div.dot-container ul li a{ 
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #cccccc;
+}
+
+a.pause-play-btn{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/icon_play.png");
+    background-repeat: no-repeat;
+    background-size: 60px 30px;
+    margin-left: 30px;
+    transition: 250ms;
+} 
+
+a.pause-play-btn:hover{
+    background-position: -30px 0px;
+}
+
+/*content01*/
+
+
+div.content01-container{
+    padding: 64px 0px;
+    background: #ffffff;
+}
+
+div.intro-container{
+    width: 100%;
+    display: flex;
+    margin-bottom: 64px;
+    box-sizing: border-box;
+}
+
+.content-item{
+    flex-basis: 50%;
+    flex-grow: 1;
+    border-bottom: solid 5px #333333;
+    position: relative;
+}
+
+
+.content-item:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: gold;
+    transition: 300ms;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    transform: scaleX(0);
+}
+
+.content-item:hover:after{
+    transform: scaleX(1);
+}
+
+
+.content-item:nth-of-type(1){
+margin-right: 2.7%;
+}
+
+.item-image {
+    padding-top: 62.1%;
+    height: 0px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+div.item-text{
+    background-color: #eeeeee;
+    padding: 30px 26px 26px; 
+}
+
+.item-title{
+    font-size: 24px;
+    margin-bottom: 34px;
+
+}
+.item-title span{
+    display: block;
+    color: #333333;
+}
+div.item-icon{
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+}
+
+div.item-icon:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url("../images/btn_link.png") no-repeat 0px center  / 40px 20px;
+    margin-right: 5px;
+    transition: 300ms;
+
+}
+.content-item:hover div.item-icon:before{
+    background-position: -20px 0px;
+}
+
+
+
+
+.menu{
+    background-image: url("../images/main_img_01.jpg");
+}
+
+.local{
+    background-image: url("../images/main_img_02.jpg");
+}
+
+
+
+/*franchise*/
+
+section.franchise-container{
+    display: flex;
+}
+
+div.content-title-box{
+   background:gold;
+   padding: 60px 30px;
+   margin-right: 2.7%; 
+
+}
+
+h2.content-title {
+    font-size: 36px;
+    margin-bottom:20px;
+}
+
+h2.content-title:after{
+    content: "";
+    display: block;
+    width: 44px;
+    height: 4px;
+    background-color: #333333;
+    margin-top: 40px;
+}
+
+p.content-text{
+    font-size: 15px;
+    color: #333333;
+    line-height: 150%;
+}
+
+div.franchise-list{
+    display: flex;
+    flex-grow: 1;
+}
+
+div.franchise-list .item-title{
+    font-size: 20px;
+}
+
+.franchise{
+    background-image: url("../images/main_img_03.jpg");
+}
+
+.review{
+    background-image: url("../images/main_img_04.jpg");
+}
+
+/* brand */
+section.brand-container{
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.brand-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url("../images/main_visual_02.jpg") no-repeat center center / cover; 
+    /* cover 꼭 넣기! */
+    transition: 2000ms;
+    z-index: 1;
+}
+
+div.brand-bg:hover{
+    transform: scale(1.05);
+}
+
+section.brand-container div.content-title-box{
+   width: 400px;
+   height: 100%;
+   background: rgba(33,33,33,0.8);    /* opercity 넣으면 글자도 투명해짐 */
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   padding-top: 90px;
+   box-sizing: border-box;
+   z-index: 2;                         
+}
+section.brand-container .content-title,
+section.brand-container .content-text{
+    color: #ffffff;
+}
+
+section.brand-container .content-title:after{
+    background: #ffffff;
+}
+a.brand-link-btn{
+    display: inline-block;
+    padding: 20px 50px;
+    border: solid 2px #ffffff;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    left: 30px;
+    bottom: 60px;
+    transition: 300ms;
+}
+a.brand-link-btn:hover{
+    color: #333;
+    background:#ffffff;
+}
+
+/*food*/
+div.content02-content{
+    width: 100%;
+    background: #ffffff;
+    padding: 60px 0px 110px;
+}
+
+section.food-container{
+    width: 100%;
+    height: 480px;
+    display: flex;
+}
+
+section.food-container div.item-image{
+    height: 100%;
+    width:  74.3%; /* 870/1170*100; */
+    background: url("../images/main_img_05.jpg") no-repeat; 
+    /* background랑 background-image의 차이 ? */
+    background-size:cover;
+    padding: 0px;
+}
+section.food-container div.content-title-box{
+    width: 400px;
+    height: 100%;
+    background-color: #eeeeee;
+    position: relative;
+    border-bottom: solid 5px #333333;
+    box-sizing: border-box;
+    padding: 60px 30px;
+}
+
+section.food-container div.content-title-box:after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: gold;
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    transition: 300ms;
+    transform: scaleX(0);
+}
+
+section.food-container div.item-icon{
+    position:absolute;
+    bottom:25px;
+    left: 30px;
+}
+section.food-container:hover div.content-title-box:after{
+    transform: scaleX(1);
+}
+section.food-container:hover div.item-icon:before{
+    background-position: -20px 0px;
+}
+
+
+/* media screen은 항상 가장 마지막에 배치. */
+
+@media screen and (max-width:1190px){
+    .item-title span{
+        display: inline;
+        font-size: 18px;
+    }
+}
+    
+
+@media screen and (max-width:1169px) {
+    .inner{
+        width: 100%;
+    }
+    div.content01-container{
+        padding-top: 30px;
+        
+    }
+
+    div.intro-container, section.franchise-container{
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+
+   
+}
+
+
+
+@media screen and (max-width:1023px) {
+
+    header.header-container,
+    div.header-bottom-container{
+        height: 60px;
+    }
+    div.header-top-container,
+    nav.gnb{                  /* 헤더 로그인 삭제 */
+        display: none;
+    }
+    h1.logo{
+        width: 25px;
+        height: 25px;                                        /* 로고사이즈 조정 */
+        background-image: url("../images/m_h1_logo.png");
+        background-size: 25px 25px;
+    }
+    div.visual-container{
+        height: 380px;
+    }
+
+    div.visual-control-container div.inner{
+        width: 769px;
+
+    }
+
+    div.content-title-box{
+        padding: 60px 10px;
+        letter-spacing: -1px;
+    }
+    h2.content-title{
+        font-size: 28px;
+        
+    }
+    section.food-container div.content-title-box p.content-text span{
+        display: inline;
+
+    }
+   
+}
+
+
+@media screen and (max-width: 768px) {
+
+    div.visual-control-container div.inner{
+        width: 100%;
+
+    }
+    div.visual-item a{
+        background-image: url("../images/movbile-visual01.jpg");
+    }
+    section.franchise-container{
+        padding: 0px;
+        max-width: 640px;
+        margin: 0px auto;
+        flex-direction: column;
+    }
+    div.content-title-box{
+        margin-right: 0px;
+        margin-bottom: 12px;
+    }
+    section.brand-container{
+        height: 550px;
+        padding: 35px 3.2%;
+        box-sizing: border-box;
+    }
+    section.brand-container div.content-title-box{
+        width: 100%;
+        padding: 60px 20px;
+    }
+    section.food-container{
+        flex-direction: column;
+        height: auto;
+        max-width: 640px;
+        margin: 0px auto;
+        padding: 0px 60px;
+        box-sizing: border-box;
+    }
+    section.food-container div.item-image{
+        height: 0px;
+        padding-bottom: 55.6%;
+        width: 100%;
+    }
+    section.food-container div.content-title-box{
+        width: 100%;
+        height: auto;
+    }
+    section.food-container div.content-title-box p.content-text{
+        margin-bottom: 40px;
+    }
+}
+
+
+
+@media screen and (max-width:414px) {
+    div.intro-container{
+        flex-direction: column;
+        padding: 0px 15px;
+        
+    }
+    .content-item:nth-of-type(1){
+        margin-right: 0px;
+        margin-bottom: 20px;
+        }
+
+    section.franchise-container{
+        padding: 0px;
+    }
+    div.content-title-box{
+        height: 450px;
+        box-sizing: border-box;
+    }
+    div.franchise-list{
+        margin-top: -120px;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+}
+

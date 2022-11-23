@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그</title>
+    <style>
+        /* 
+        
+        시맨틱태그(목적에 맞는, 용도에 맞는 태그를 사용하여 구조를 잡는 것 )
+
+        시맨틱태그를 해야하는 이유 
+        1. 검색엔진에 최적화(seo)
+        브라우저마다 가지고 있는 검색엔진이 태그의 목적에 부합하게 설꼐되어 있는 구조의 
+        사이트에서 효율적으로 정보를 파악할 수 있기 때문에
+        사이트의 노출에 유리해진다. 
+
+        2. 웹 접근성의 효율이 증가 
+        리더기에서 컨텐츠의 중요도를 태그로 구분하기 때문에 컨텐츠의 
+        구분을 명확하게 할 수 있다.
+
+        3. 관리에 용이
+        단순한 div, span같은 의미를 가지고 있지 않은 태그로만 작성되면
+        구별하기 어려워 보수나 작업에 어려움이 생기는 일이 종종 생긴다. 
+
+        실무에서 100% 완벽하게 사용하지 못하는 경우도 생기기는 하지만 이러한
+        현상들을 항상 고민하고 고려해서 최적의 웹 사이트를 구성하는 것이 바람직하다. 
+
+        제목태그 
+        - h태그 
+        h1~ h6 까지 있으며 숫자의 의미는 제목이 가지고 있는 크기를 의미한다. 
+        즉 작은 제목일수록 큰 영역을 태표하는 제목이 된다. 
+        보통 h1은 사이트의 제목 = 로고 
+        h2,h3 숫자의 순서대로 영역을 설정한다. 
+        숫자를 건너뛰어서 제목을 구성할수는 없다. 
+
+        h1이후에 h3을 넣을수는 없다. 
+        단순히 글자의 크기나 스타일에 의해서 크기를 결정짓지 않아야 한다. 
+        h1은 보통 사이트의 제목으로 한번만 사용하게 되고 h2~h6은 구조에 따라 반복이
+        가능하다. 
+
+        header = 사이트내에서 메인메뉴, 로고와 같이 페이지와 관계없이 
+        같은 레이아웃을 제공해야 하는 구조를 가진 영역 
+
+        * header와 footer는 레이아웃을 바꾸지 않음 
+
+        nav = 사이트 내의 모든 컨텐츠를 포함하는 메인메뉴같은 영역을 감싸는 태그
+        div > ul > li의 구조가 아닌
+        nav > ul > li 구조로 잡는 것이 더 이론적이다. 
+        다만 일부 컨텐츠의 리스트 경우 nav를 사용하지는 않는다.(topmenu, 컨텐츠리스트)
+
+        main = 웹 페이지에서 컨텐츠를 이루는 부분
+
+        section = 하나의 주제(컨텐츠)에 들어가는 컨텐츠들을 묶어주는 태그 (덩어리 태그) 
+        article =  독립적으로 분리될 수 있는 컨텐츠를 의미(게시판, 공지사항)
+
+        aside = 메인컨텐츠 외에 부수적으로 들어가는 영역태그
+
+        footer = 하단영역 태그 
+        하단영역에 로고가 들어가는 경우 보통 제목요소로 표현하지 않는다 
+        디자인 요소로 보기 때문에 img background 다양하게 가능하다. 
+
+        */
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">
+                <a href="#" title="홈으로 이동">
+                    logo
+                </a>
+            </h1>
+
+            <nav class="gnb">
+                <ul class="mainMenu">
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+            </nav>
+        </header>  
+
+        <main class="container">
+            <section class="content01">
+                <h2>content01</h2>
+                <article>
+                    <h3>content01</h3>
+                    content01
+                </article>
+
+                <article>
+                    <h3>content02</h3> <!--같은 등급은 같은 h태그 사용(형제관계)-->
+                    content02         
+                </article>
+
+                
+            </section>
+
+
+            <article>
+                <h2>content02</h2>
+            </article>
+
+            <!-- <section>
+                <h2>content01</h2>
+                <article class="suvContent">
+                    <h3>content03</h3>
+                </article>
+            </section> -->
+
+        </main>
+
+        <footer>
+            footer
+        </footer>
+
+    </div>
+</body>
+</html>

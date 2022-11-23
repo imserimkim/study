@@ -1,0 +1,57 @@
+@charset "UTF-8";
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+div, p, h1, h2, h3, h4, h5, p, figure {
+  margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+} /*cursor 포인터*/
+* {
+  box-sizing: border-box;
+}
+
+::after, ::before, a {
+  display: inline-block;
+}
+
+header {
+  padding: 28px;
+  width: 100%;
+  height: 156px;
+  background-color: black;
+}
+header div.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+header div.header-container ul {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+header ul.menu {
+  display: flex;
+  padding-top: 28px;
+  justify-content: space-between;
+  width: 335px;
+  text-align: center;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.common.css.map */

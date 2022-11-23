@@ -1,0 +1,43 @@
+
+// index.scss
+
+$size: 1400px;
+$bg: #ddd;
+$font-name: 'dotum';
+
+@mixin flex($n:flex, $a:flex-start){
+    display: $n;                 //flex 정의
+    align-items: $a;
+
+    @content;
+}
+
+// @include flex(flex,center){
+//    justify-content: space-between
+// };                  //flex 호출 - include는 실행할 곳에다가 붙여주기 
+
+main{
+    background-color: $bg;
+    font-family: $font-name;
+}
+article{
+    max-width: $size;                 // max-width값을 여러군데에 받는다. (내용의 모든 요소를 한번에 바꿔야 할때 유용)
+    margin: 0 auto;
+    text-align: center;
+
+    h2{max-width: $size;}
+    ul{ 
+        @include flex(){justify-content: center};
+        li{
+            @include flex(flex,center);
+            // display: flex;
+            width: 30%;
+            // align-items: center; 
+            &::after{   // li::after 대신에 &::after로 부모요소 표시
+                content: '';
+                flex-grow: 1;
+                border-bottom: 1px solid #000;
+            }
+        }
+    }    
+}

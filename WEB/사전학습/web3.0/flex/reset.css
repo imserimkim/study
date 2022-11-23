@@ -1,0 +1,9 @@
+div.container{
+    background: lightgray;
+}
+
+.item{
+    padding:12px;
+    border: solid 2px gray;
+    background-color: aqua;
+}

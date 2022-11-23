@@ -1,0 +1,36 @@
+@import url("./common.css");
+section.banner {
+  width: 100%;
+  height: 845px;
+  background: url("../main_img/Tissot_models2 2.jpg") center center;
+  background-repeat: no-repeat;
+}
+
+div.banner-page-moving {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px;
+}
+
+.video-container {
+  width: 100%;
+  align-items: center;
+  margin: 0px auto;
+}
+
+div.video-text {
+  align-items: center;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  height: 74px;
+  padding: 95px;
+}
+
+div.video-text > a {
+  width: 100%;
+  padding-top: 95px;
+  padding-bottom: 171px;
+}/*# sourceMappingURL=main_index.css.map */

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기능헤더</title>
+</head>
+<body>
+    <!-- 기능헤더.html -->
+
+    <header class="active">                             <!-- 스크롤 시 움직이는 것 = 클래스가 움직이는 것 -->
+        <h1>BI</h1>
+        <nav>
+            메뉴
+        </nav>
+    </header>
+    <div class="con active">
+        콘텐츠
+    </div>
+    
+    <style>
+        .con{
+            transform: translateY(100%);
+            transform: 0.5s;
+        }
+        .con.active{
+            transform: translateY(0%);
+        }
+        header h1{color: #fff;}             /* 클래스가 없을때 */
+        header nav{color:#fff;}
+
+        header.active h1{color:#000;}             /* 클래스가 있을때 */
+        header.active nav{color:#000;}
+
+        body{
+            background-color: #aaa;
+        }
+        header{position: fixed; top:0;}
+        body{height: 5000px;}
+    </style>
+
+    <script>
+        const elHeader = document.querySelector('header');
+        window.onscroll =()=>{
+            if(window.pageYOffset > 100){
+                elHeader.classList.add('active');
+            }
+            else{
+                elHeader.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

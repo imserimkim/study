@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이즈 단위</title>
+    <style>
+
+        /* 
+        << 단위의 종류 >>
+        px = 가장 기본적인 단위 / 고정형
+
+        % = 반응형에서 가장 기본적으로 사용하는 단위 
+        부모요소의 사이즈에 영향을 받는다. 
+
+        em = 부모요소의 폰트사이즈를 기준으로 잡는다. 
+        부모요소에 font-size가 없는 경우 body를 기준으로 잡게 되며, 
+        주로 반응형에서 폰트사이즈 조절용으로 많이 쓰인다.
+        부모요소에 폰트사이즈를 기준으로 하기 때문에 구조가 복잡해지면
+        오히려 관리하기 힘들어진다.
+        ex) 부모요소의 폰트사이즈가 20px = 1 em 
+
+        rem = 최상위(body, html)에 있는 폰트사이즈가 기준이 된다. 
+        최상위에 선언된 font-size가 1rem이 된다. 
+        * body, html에 선언되는 기본 font-size는 16px
+        계산상의 이유로 body의 font-size를 10px로 선언후 사용한다. 
+        1rem= 10px 
+        em과 달리 광범위하게 쓰일 수 있는 장점이 있다. 
+        (widh, height, padding, margin, font-size)
+
+
+
+
+        */
+
+        body, html{
+            font-size: 10px;    /* 10px과 62.5%는 결과적으로 는 같은 값이다. 그러나 
+            접근성 측면에서 본다면 고정수치로 넣게 되면 브라우저 자체에서 
+            글꼴을 키울 경우 변화되지 않는다.
+            %로 설정하면 브라우저 설정에 따라 폰트 크기도 같이 올라가게 되므로 
+            되도록이면 %로 변환하는것이 편하다. 
+            
+            반응형이라고 모든 수치를 %나 em, rem으로 구성할 필요는 없다.
+            rem의 결과는 광범위하게 사용하게 아닌 국소적으로 사용할 경우(pontsize등 
+            한군데만 사용하는 것) 추천하지 않으며,
+            % 또한 반응형에서 사이즈에 영향을 받는 구조가 아닌 경우 사용하지 않아도 된다. 
+            */
+        }
+
+        div.box{
+            width: 80%;
+            /* font-size: 40px; */
+
+            background: coral;
+            margin: 0px auto
+        }
+
+        div.content{
+            width:10.2rem;
+            height: 10em;
+            background: gray;
+           
+        }
+
+        
+    </style>
+
+</head>
+<body>
+
+    <div class="box"> 
+        <div class="content">Lorem dolor sign</div>
+    </div>
+    
+</body>
+</html>

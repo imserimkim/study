@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한솥 메뉴 만들어보기</title>
+    <style>
+        body, html, div, ul, li, a{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        div.container{
+            width: 100%;
+            height: 500px;
+            background-color: coral;
+        }
+        div.inner{
+            width: 1170px;
+            height: 120px;
+            background-color:  transparent;
+            margin: 0px auto;
+          
+        }
+        div.headerTop{
+            width: 100%;
+            height: 30px;
+            background:  transparent;
+        }
+        div.headerBottom{   
+            width: 100%;
+            height: 90px;
+            background-color: white;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        div.logo{
+            width: 110px;
+            height: 45px;
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: pink;
+         }
+
+        div.gnb{
+            height: 100%;
+            float: right;
+            background: pink;
+        }
+        div.gnb ul{
+            width: 100%;
+            height: 100%;
+        }
+        div.gnb ul li{
+            float: left;
+            padding: 0px 30px;
+            height: 100%;
+        }
+        div.gnb ul li a{  
+            display: block;
+            height: 100%;
+            width: 100%;
+            color: #333333;
+            line-height: 90px;
+        }
+        span.line{
+            display: block;
+            width: 0px;
+            height: 7px;
+            background: gold;
+            margin: -7px auto 0px;
+            transition: 1000ms;
+           /*  transform: scaleX(0); */
+        }
+
+        div.gnb ul li:hover a span.line{           /*hover의 대상은 span*/
+            /* transform: scale(1); */
+            width: 100%;
+           
+        }
+
+        div.gnb ul li:hover a{
+            color: gold;
+        }
+        div.gnb ul li a:after{                   /*오타주의*/
+            content: "";
+            display: block;
+            width: 0px;
+            height: 7px;
+            background: gold;
+            transition: 300ms;
+            margin: -7px auto 0px;
+        }
+        div.gnb ul li:hover a:after{
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="headerTop"></div>
+            <div class="headerBottom">
+                <div class="logo">logo</div>
+                <div class="gnb">
+                    <ul>
+                        <li><a href="#" title="메인메뉴">BRAND</a></li>
+                        <li><a href="#" title="메인메뉴">ESG</a></li>
+                        <li><a href="#" title="메인메뉴">MENU</a></li>
+                        <li><a href="#" title="메인메뉴">STORE</a></li>
+                        <li><a href="#" title="메인메뉴">EVENT</a></li>
+                        <li><a href="#" title="메인메뉴">FRANCHISE</a></li>
+                        <li><a href="#" title="메인메뉴">HANSOT</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</body>
+</html>

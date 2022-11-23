@@ -1,0 +1,45 @@
+body, html{ 
+    font-family: 'Inter', sans-serif;
+}
+
+header.header-container{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    box-sizing: border-box;
+    margin: auto;
+    
+}
+
+
+nav.gnb{
+    width: 100%;
+   height: 100%;
+   
+
+}
+
+nav.gnb ul{
+    margin-top: 20px;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    margin: 20px;
+    align-items: center;
+   
+    
+}
+    
+
+nav.gnb ul li{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+   
+}
+
+

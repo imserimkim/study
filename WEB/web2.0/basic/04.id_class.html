@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.id_class.html</title>
+
+    <style>
+
+        #title{
+            font-size: 30px;
+        }
+        .title-fontcolor{
+            color: green;
+        }
+        .title-fontweight{
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <!--id와 class
+    
+    태그에 식별을 위해 네이밍을 해주는 기법
+    개발자가 임의대로 네이밍을 할 수 있고, 규칙이 있는 건 아니지만 
+    몇가지 규칙을 가지고 있다. (회사마다 규칙이 있는 경우도 있음)
+
+
+    1. 한글금지, 첫글자는 대문자가 올 수 없다. (abc = 0, Abc = x)
+
+    2. 모든 이름은 대소문자를 구별한다. (apple과 aPple는 서로 다름)
+
+    3. 이름 중간이나 끝에 숫자를 넣을수는 있지만 시작할 수는 없다. 
+    (123abc = X, abc123 = o)
+
+    4. 보통 두 개 이상의 단어가 합쳐지는 경우 띄어쓰기를 사용할 수 없다. 
+    (apple color는 하나의 식별자가 아닌 따로따로 인식한다.)
+
+    5. 두 개 이상의 단어가 합쳐지는 경우 -,_를 사용하거나 카멜기법을 이용한다. 
+    ex) apple_color, apple-color, appleColor를 사용한다. 
+
+    6. 특수문자 사용금지(-,_만 사용가능)
+
+    7.목적에 맞는 네이밍만 사용한다.
+
+        id = 고유의 이름 식별자
+        하나의 html 문서에서 한번만 사용할 수 있다. (중복 x);
+        스타일 작성을 위해 id를 사용하지 않는다. 
+        영역이나 레이아웃 위치에 대한 지정용도로 사용된다. 
+        style에서 식별자 = #;
+        예약어가 있는 경우 예약어를 사용한다. 
+        
+        class = 중복사용가능한 이름 식별자 
+        영역에 대한 지정보다는 스타일 지정에 대한 용도로 사용된다. 
+        중복적으로 사용 가능하기 때문에 재활용을 목적으로 사용한다. 
+        두번째 단어부터는 -,_으로 구별하는 경우가 많다. 
+        sliderCountentText = slider-content-text
+        하나의 태그에 여러개의 클래스를 사용해도 된다. 
+        style 식별자 = .
+
+        하나의 태그에 id와 class를 섞어서 사용해도 된다. 
+
+
+    -->
+
+    <p id="title" class="title-fontcolor title-fontweight">p태그는 문단 태그입니다.</p>
+    <p class="title-fontcolor">p태그는 문단 태그입니다.</p>
+    <p class="title-fontcolor">p태그는 문단 태그입니다.</p>
+    <p>p태그는 문단 태그입니다.</p>
+    <p>p태그는 문단 태그입니다.</p>
+
+</body>
+</html>

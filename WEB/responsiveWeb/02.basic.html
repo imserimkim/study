@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <title>Document</title>
+
+    <style>
+        /* 
+        viewport에 들어가는 속성 값들 
+        width - 뷰포트의 가로 크기
+        숫자가 들어갈 경우 고정값을 가진 너비값이 설정된다. 
+        기본값은 device-width(화면 해상도의 너비에 따라서 줄어들기)
+        height값도 설정할 수 있지만 스케일의 조정을 위해서 width값만 설정하고 
+        height는 자동으로 줄어들도록 하기위해 생략한다. 
+
+        initial-scale = 접속했을때 처음 보여질 화면의 확배 배율 
+        기본값은 1.0 0~10까지 숫자로 설정할 수 있다. 
+        1보다 작으면 축소, 1보다 많으면 확대 
+
+        minimum-scale = 사용자가 늘릴 수 있는 최소배율값 ( 0 ~ 10 ) 
+        maximum-scale = 사용자가 늘릴 수 있는 최대배율값 ( 0 ~ 10 )
+        user-scaleable = yes 혹은 no (사용자가 임의대로 축소나 확대할 수 있는 권한 부여 
+        기본값 yew. no = 금지)
+        *no를 설정할 경우 웹 접근성에 대해서 경고가 발생(validator)
+
+        반응형 시 고려해야 할 사항 
+        - 분기점의 갯수
+        프로젝트에 따라 갯수가 달라지지만 보통 크게 3가지 형태로 나눈다 
+        pc,tablet,mobile
+
+        pc 1200px ~ 
+        tablet 768 ~ 1199px
+        mobile 480px ( 최저 디바이스를 맞춰야 하는 경우 320px )
+
+        레이아웃에 따라서 중간 분기점이 생성되는 경우도 많다. 
+
+
+        */
+
+        div.box{
+            width: 1200px;
+            margin: 0px auto;
+            background: coral;
+            height: 300px;
+        
+        }
+
+        /*desk top*/                       /* 주석 사용하여 화면 구분해주기 */
+        @media screen and (max-width:1199px){       /* 스크린 사이즈가 최대 1199 */
+            div.box{
+                width: 100%;
+                background: purple;          
+            }
+        } 
+
+        /*tablet setting*/
+        @media screen and (max-width:979px){
+            div.box{
+                width: 80%;
+                height: 500px;
+                background: blue;
+            }
+        }
+            
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        box
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.layoutShifter.html</title>
+    <style>
+    /*
+        분기점을 많이 두어서 여러 디바이스에 반응을 가장 빠르게 한다.
+        단순히 컨텐츠를 아래로 드랍시키는 것이 아닌 새로운 컨텐츠의 이동이 자유로우며,
+        분기점 마다 레이아웃의 변화가 가장 심하다. 
+        레이아웃을 포함하여 컨텐츠 내부에서도 분기점을 둬야 하는 경우가 있다. 
+        컨텐츠의 관리가 어려우며, 난이도가 패턴중에서 가장 높다. 
+
+
+    */
+
+    body, html{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .clearfix:after{
+        content: "";
+        display: block;
+        clear: both;
+
+    }
+    div.wrapper{
+        width: 1200px;
+        padding: 1%;
+        background: gray;
+        box-sizing: border-box;
+        margin: 0px auto;
+    }
+
+    header{
+        width: 100%;
+        height: 50px;
+        background:#ffffff;
+        margin-bottom: 12px;
+    }
+
+    main{
+        width: 100%;
+        background: #ffffff;
+        margin-bottom: 12px;
+    }
+
+    section.section01{
+        width: 30%;
+        height: 300px;
+        float: left;
+        background: aqua;
+        margin-right: 1%;
+    }
+    section.section02{
+        width: 69%;
+        float: left;
+        background: coral;
+        margin-bottom: 10px;
+    }
+    section.section02 div{
+        width: 49%;
+        height: 145px;
+        float: left;
+        background: pink;
+
+    }
+    div.content01{
+        margin-right: 2%;
+    }
+    section.section03{
+        width: 69%;
+        background: lemonchiffon;
+        float: left;
+    
+    }
+    section.section03 div{
+        width: 49%;
+        height: 145px;
+        background: pink;
+        float: left;
+    }
+    div.content03{
+        margin-right: 2%;
+    }
+
+    section.section04{
+        width: 100%;
+        height: 100px;
+        margin: 12px 0px;
+        background: blue;
+        float: left;
+    }
+
+
+    section.section05{
+        width: 100%;
+        background: pink;
+        float: left;
+    }
+    section.section05 div{
+        float: left;
+        height: 200px;
+        background: coral;
+    }
+    div.content05{
+        width: 39%;
+        margin-right: 1%;
+    }
+    div.content06{
+        width: 60%;
+    }
+    footer{
+        width: 100%;
+        height: 100px;
+        background: black;
+        
+    }
+
+    @media screen and (max-width: 1199px) {
+        div.wrapper{
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width:1023px) {
+        
+        section.section02 div{
+           height: 300px;
+        }
+
+        section.section03{
+            width: 100% ;
+        }
+        
+    }
+    @media screen and (max-width:768px){
+        section.section01{
+            width: 49%;
+            margin-right: 2%;
+        }
+        section.section02{
+            width: 49%;
+        }
+        section.section02 div{
+            width: 100%;
+            margin-right: 0px;
+            height: 145px;
+        }
+        div.content01{
+            margin-bottom: 10px;
+        }
+
+        section.section03{
+            margin-bottom: 10px;
+        }
+        section.section03 div{
+            width: 100%;
+            height: 310px;
+            margin-right: 0px;
+        }
+
+        div.content03{
+            margin-bottom: 10px;
+        }
+        section.section04{
+            display: none;
+        }
+        section.section05 div{
+            width: 100%;
+            height: 300px;
+            margin-right: 0px;
+        }
+        div.content05{
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (max-width:575px) {
+        section.section01,
+        section.section02{
+            width: 100%;
+        }
+        section.section01{
+            margin-bottom: 10px;
+        }
+        section.section02 div{
+            height: 250px;
+        }
+        
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header>header</header>
+        <main class="clearfix">
+            <section class="section01">content01</section>
+                
+            <section class="section02">
+                <div class="content01">content01</div>
+                <div class="content02">content02</div>
+            </section>
+
+            <section class="section03">
+                <div class="content03">content03</div>
+                <div class="content04">content04</div>
+            </section>
+
+            <section class="section04"> section04 </section>
+
+
+            <section class="section05"> 
+                <div class="content05">content05</div>
+                <div class="content06">content06</div>
+           </section>
+        </main>
+        <footer>footer</footer>
+    </div>
+
+</body>
+</html>

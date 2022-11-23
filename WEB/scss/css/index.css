@@ -1,0 +1,28 @@
+main {
+  background-color: #ddd;
+  font-family: "dotum";
+}
+
+article {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+article h2 {
+  max-width: 1400px;
+}
+article ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+article ul li {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+article ul li::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px solid #000;
+}/*# sourceMappingURL=index.css.map */

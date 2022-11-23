@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">   
+    <!--같은 내용의 태그를 반복적으로 쓸때 외부스타일 링크를 통해 공통으로
+    이용할 수 있다-->
+
+    <style>
+        div.container{
+            display: flex;
+            /* flex-wrap: wrap-reverse; */
+            flex-flow: row wrap;
+           
+
+        /*
+        flex-wrap: 부모요가 자식요소들의 컨텐츠들을 한 줄에 다 넣을 수 없을때 줄바꿈
+        처리 속성 
+        * flex는 영역을 넘어간다고 해서 자동으로 줄 바꿈되지 않는다. 
+
+        nowrap : 줄바꿈 처리하지 않음(기본값)
+        wrap : 줄 바꿈 처리(flaot나 inline-block과 흡사)
+        wrap-reverse: 줄 바꾸믕ㄹ 하지만 아래로 떨어지지 않고 반대로 올라감 
+
+        flex-flow : direction wrap으 그룹속성 
+        순서는 direction, wrap 순서대로 값이 들어간다. 
+            
+        */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"> aaaaaaaaaaaa</div>
+        <div class="item"> bbb</div>
+        <div class="item"> cccccc</div>
+        <div class="item"> dddddddddd</div>
+    </div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+</body>
+</html>

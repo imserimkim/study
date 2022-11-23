@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.align.html</title>
+
+    <style>
+         /*
+         컨텐츠 정렬 방법
+         
+         1. display :  inline-block으로 정렬하는 방법 
+        장점: 간단하게 컨텐츠를 가로로 정렬할 수 있다. 
+        단점: 컨텐츠 사이에 지정되지 않은 여백이 들어가 있어서 이에 대한 대응을 해야 한다. 
+
+        계행문자()
+        태그와 태그사이에 엔터를 쳤을때 나오는 공백이 화면에 출력되는 현상 
+        이 공백이 font-size에 영향을 받아서 공백이 보이게 되는 현상        
+
+        2.float: left로 정렬하는 방법
+        장점: 간단하게 컨텐츠를 정렬할 수 있다. 
+        단점: float 속성은 객체를 띄우기 때문에 부모요소가 자식요소의 높이값을 받아오지 못하는
+        현상이 생긴다. 
+
+        부모요소에 영역값을 넣는 것이 가장 기초적인 방법이지만, 유동서이 사라지기 때문에
+        부모요소에 overflow:hidden을 넣어 body와 같은 조건을 만들어서 자식의 영역값을 인식하도록
+        해야 한다. 
+
+        */ 
+
+        div.align01{
+            background: coral;
+            padding: 25px;
+        }
+        div.align01 div{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            display: inline-block;
+        }
+        div.align02{
+            background: #800080;
+            padding: 25px;
+            overflow: hidden;
+        }
+        div.align02 div{
+            width: 100px;
+            height: 100px;
+            background: coral;
+            float: left;
+        }
+        div.box{
+            height: 500px;
+            background-color: pink;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div class="align01">
+        <div class="align01-item">item</div>
+        <div class="align01-item">item</div>
+        <div class="align01-item">item</div>
+        <div class="align01-item">item</div>
+        <div class="align01-item">item</div>
+    </div>
+
+    <div class="align02">
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+    </div>
+
+    <div class="box"></div>
+    
+</body>
+</html>

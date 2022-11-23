@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cdn import 방식</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Noto+Sans+KR&display=swap');
+        body{
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        /* 
+        
+        외부 css를 연결하는 방법중에 link 방식과 
+        import 방식이 있는데 차이점은 파일을 읽어오는 방식 차이다. 
+        link는 병렬식, @import는 직렬식으로 로딩을 한다. 
+
+        병렬방식은 한번에 링크 파일들을 모두 로딩하지만 
+        직렬방식은 한번에 하나의 파일만 읽어올 수 있다. 
+        양이 많아지면 많아질수록 직렬방식은 좋지 않다. 
+        *엣지에서 @import 방식을 읽어오지 못하는 버그가 있다.  
+
+        */
+
+
+    </style>
+</head>
+<body>
+    <p>안녕하세요?</p>
+
+</body>
+</html>

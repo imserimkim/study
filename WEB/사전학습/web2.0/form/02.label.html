@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.label.html</title>
+</head>
+<body>
+    <!--
+        [label요소]
+
+        일반 텍스트와 입력요소간의 연결고리를 두어 하나의 영역으로 
+        인식하는 기법
+        웹표준과 접근성을 준수하기 위해서는 기본적으로 label을 사용하여 작성해야 한다. 
+
+        1. 명시적 작성 방식 (이름과 이름을 연결)
+        label의 for속성과 input의 id를 서로 연결해서 서로 덜어져 있어도 연결해주는 방식
+
+        2. 암시적 작성 방식
+        label 태그안에 input요소와 텍스트를 함께 넣음으로써 id와 for를 넣지 않고도 연결해주는
+        방식
+
+        오래된 기기나 버전에서는 암시적 작성방식을 인식하지 못하거나 지원하지 않는 경우가
+        있기 때문에 명시적 작성 방식을 더 선호한다. 
+    --> 
+
+    <form>
+        <!-- 명시적 작성방식 -->
+        <label for="male">남성</label>
+        <input type="radio" name="gender" value="male" id="male">
+
+        <!-- 암시적 작성방식-->
+        
+       <label>
+        여성
+            <input type="radio" name="gender" value="female" id="female">
+       </label>
+  
+   
+
+
+
+    </form>
+</body>
+</html>
