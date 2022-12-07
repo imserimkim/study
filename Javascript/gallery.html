@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article class="gallery">
+        <h2>Gallery</h2>
+        <div>
+            <!-- <figure>
+                <img src="../img/01.jpg">
+                <figcaption>이미지명</figcaption>
+            </figure> -->
+        </div>
+    </article>
+
+    <style>
+        .gallery{
+            width: 70%;
+            margin: 100px auto;}
+        .gallery div{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .gallery figure{margin:5% 0; width:30%; }
+        .gallery figure img{width: 100%;}
+    </style>
+
+    <script>
+        let data=[
+            {url:'./img/01.jpg', title:'이미지 01', detail:'주은이짱 지영이짱~~~♡ 01'},
+            {url:'./img/02.jpg', title:'이미지 02', detail:'주은이짱 지영이짱~~~♡ 02'},
+            {url:'./img/03.jpg', title:'이미지 03', detail:'주은이짱 지영이짱~~~♡ 03'},
+            {url:'./img/04.jpg', title:'이미지 04', detail:'주은이짱 지영이짱~~~♡ 04'},
+            {url:'./img/05.jpg', title:'이미지 05', detail:'주은이짱 지영이짱~~~♡ 05'},
+            {url:'./img/06.jpg', title:'이미지 06', detail:'주은이짱 지영이짱~~~♡ 06'},
+            {url:'./img/07.jpg', title:'이미지 07', detail:'주은이짱 지영이짱~~~♡ 07'},
+            {url:'./img/08.jpg', title:'이미지 08', detail:'주은이짱 지영이짱~~~♡ 08'},
+            {url:'./img/09.jpg', title:'이미지 09', detail:'주은이짱 지영이짱~~~♡ 09'},
+            {url:'./img/10.jpg', title:'이미지 10', detail:'주은이짱 지영이짱~~~♡ 10'},
+        ]
+
+        // data[0].url ----> 01.jpg
+
+        const elGallery = document.querySelector('.gallery div');
+        
+        // elGallery.innerHTML=`<figure>
+        //                         <img src="./img/01.jpg">
+        //                         <figcaption>이미지명</figcaption>
+        //                     </figure>`;
+
+        data.forEach(function(num,key){                   
+            console.log(num);0
+            // elImg.url = data[imgURL].url;
+            // elImg.title=data[imgTI]
+            elGallery.innerHTML+=`<figure>
+                                <img src="${num.url}">
+                                <figcaption>${num.title}</figcaption>    //num은 중괄호 값
+                            </figure>`;
+        });
+    </script>
+</body>
+</html>
