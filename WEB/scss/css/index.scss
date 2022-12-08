@@ -1,3 +1,4 @@
+@import "_media";
 
 // index.scss
 
@@ -40,4 +41,33 @@ article{
             }
         }
     }    
+}
+
+.bg{
+    margin: 100px auto;
+    width: 1400px;
+    >div{
+        display: flex;
+        p{
+            width: 300px;
+            height: 200px;
+        }
+
+        $array : (1:'01.png', 2:'02.png', 3:'03.png');
+
+        // @each $i,$name in $array{
+        //     p:nth-of-type(#{$i}){
+        //         background: url('../img/#{$name}') 0 0 / cover no-repeat;
+        //     }
+        // } 
+
+        @for $i from 1 to 4{
+
+            // nth($array,2)
+
+            p:nth-of-type(#{$i}){
+                background: url('../img/#{nth($array,$i)}') 0 0 / cover no-repeat;
+            }
+        }
+    }
 }
