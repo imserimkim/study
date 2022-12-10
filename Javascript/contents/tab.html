@@ -19,45 +19,46 @@
         <div id="ex_con">
             contents
         </div>
+    </article>
 
-        <style> 
-            #ex_con{
-                padding:60px; 
-                border:2px solid #000;
-                display: none;
-            }
-            #ex_con.on{
-                padding:60px;
-                border:2px solid #000;
-                display: block;
-            }
-        </style>
+    <style> 
+        #ex_con{
+            padding:60px; 
+            border:2px solid #000;
+            display: none;
+        }
+        #ex_con.on{
+            padding:60px;
+            border:2px solid #000;
+            display: block;
+        }
+    </style>
 
-        <script>
+    <script>
 
+        
+        ex_btn.onclick = function(){
             
-            ex_btn.onclick = function(){
-                
-                ex_con.classList.toggle('on');
+            ex_con.classList.toggle('on');
 
-                let blen = ex_con.classList.contains('on');
+            let blen = ex_con.classList.contains('on');
 
-                if(blen){
-                    ex_btn.textContent="보기";               //true나 false만 해당 
-                }
-                else{
-                    ex_btn.textContent="닫기";
-                }
-                
-            //     let blen = ex_btn.classList.contains('on');
-
-            //     if(blen){
-            //         ex_con.classList.add('on'); //숨기기
-            //     }else{
-            //         ex_con.classList.remove('on');
-            //     }
+            if(blen){
+                ex_btn.textContent="보기";               //true나 false만 해당 
             }
-        </script>
+            else{
+                ex_btn.textContent="닫기";
+            }
+            
+        //     let blen = ex_btn.classList.contains('on');
+
+        //     if(blen){
+        //         ex_con.classList.add('on'); //숨기기
+        //     }else{
+        //         ex_con.classList.remove('on');
+        //     }
+        }
+    </script>
 
         <!-- <script>
             
@@ -84,8 +85,8 @@
             //https://hianna.tistory.com/700 << 참고하기 
 
             console.log();
-    </script>  -->
-    </article>
+        </script>  -->
+
 
 
 
@@ -95,14 +96,14 @@
     <article class="tab">
         <div>
             <button class="on">tab01</button>
-            <button >tab02</button>
-            <button  >tab03</button>
+            <button>tab02</button>
+            <button>tab03</button>
         </div>
 
         <div class="content">
             <div class="on">content 01</div>
-            <div  >content 02</div>
-            <div >content 03</div>
+            <div>content 02</div>
+            <div>content 03</div>
         </div>
     </article>
 
@@ -217,7 +218,8 @@
 
                         elBtn[key].classList.add('on');
                         elContent[key].classList.add('on');
-                        idx = key;
+                        
+                        idx = key;                             //remove 대상자를 기록
                     }
             });
 
